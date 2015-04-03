@@ -28,5 +28,18 @@ namespace rpg_Game_V1.Weapons
 
             return (Ability)temp;
         }
+
+
+        public int HitMod
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }
