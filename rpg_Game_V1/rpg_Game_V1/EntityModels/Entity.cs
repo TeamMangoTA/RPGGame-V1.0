@@ -65,7 +65,7 @@ namespace rpg_Game_V1.EntityModels
             sb.AppendLine(string.Format("Type: {0}", this.GetType().Name));
             sb.AppendLine(string.Format("Name: {0}", this.Name));
             sb.Append(this.Info.ToString());
-
+       
             return sb.ToString();
         }       
     }
