@@ -29,13 +29,13 @@ namespace rpg_Game_V1.EntityModels
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.AppendLine(string.Format("- Stats:"));
-            sb.AppendLine(string.Format(" * Health: {0}", this.Health));
-            sb.AppendLine(string.Format(" * Mana: {0}", this.Mana));
-            sb.AppendLine(string.Format(" * Stamina: {0}", this.Stamina));
-            sb.AppendLine(string.Format(" * Dexterity: {0}", this.Dex));
-            sb.AppendLine(string.Format(" * Intelligence: {0}", this.Int));
-            sb.Append(string.Format(" * Strength: {0}", this.Str));
+            sb.AppendLine(string.Format("Stats:"));
+            sb.AppendLine(string.Format(" - {1,-13} {0}", this.Health, "Health:"));
+            sb.AppendLine(string.Format(" - {1,-13} {0}", this.Mana, "Mana:"));
+            sb.AppendLine(string.Format(" - {1,-13} {0}", this.Stamina, "Stamina:"));
+            sb.AppendLine(string.Format(" - {1,-13} {0}", this.Dex, "Dexterity:"));
+            sb.AppendLine(string.Format(" - {1,-13} {0}", this.Int, "Intelligence:"));
+            sb.Append(string.Format(" - {1,-13} {0}", this.Str, "Strength:"));
 
             return sb.ToString();
         }
