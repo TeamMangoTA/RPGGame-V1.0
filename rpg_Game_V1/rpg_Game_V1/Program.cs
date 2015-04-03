@@ -29,10 +29,13 @@ namespace rpg_Game_V1
             //Application.Run(new CombatScreen());
 
             var testEnemy=new Enemy("Billy",0,0,0,0,0,0,@"http://assets.sbnation.com/assets/795920/zergling-300.jpg");
+            
             var test = new Renderer();
             test.OpenComabatScreen(testEnemy);
 
             AllocConsole();
+            Console.WriteLine(testEnemy);
+            Console.ReadKey();
         }
     }
 }
