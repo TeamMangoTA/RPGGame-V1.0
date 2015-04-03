@@ -39,7 +39,5 @@ namespace rpg_Game_V1.EntityModels
 
             return sb.ToString();
         }
-
-        
     }
 }

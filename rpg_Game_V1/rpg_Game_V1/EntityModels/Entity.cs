@@ -67,6 +67,6 @@ namespace rpg_Game_V1.EntityModels
             sb.Append(this.Info.ToString());
 
             return sb.ToString();
-        }  
+        }       
     }
 }
