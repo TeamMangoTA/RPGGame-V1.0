@@ -16,6 +16,8 @@ namespace rpg_Game_V1.EntityModels
         public int Int { get; set; }
         public int Str { get; set; }
 
+        public int DefenceRating { get; set; }
+
         public EntityStats(int health, int mana, int stamina, int dex, int intelligence, int strenght):this()
         {
             this.Health = health;
