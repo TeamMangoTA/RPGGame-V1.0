@@ -25,5 +25,21 @@ namespace rpg_Game_V1.EntityModels
             this.Int = intelligence;
             this.Str = strenght;
         }
+
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine(string.Format("- Stats:"));
+            sb.AppendLine(string.Format(" * Health: {0}", this.Health));
+            sb.AppendLine(string.Format(" * Mana: {0}", this.Mana));
+            sb.AppendLine(string.Format(" * Stamina: {0}", this.Stamina));
+            sb.AppendLine(string.Format(" * Dexterity: {0}", this.Dex));
+            sb.AppendLine(string.Format(" * Intelligence: {0}", this.Int));
+            sb.Append(string.Format(" * Strength: {0}", this.Str));
+
+            return sb.ToString();
+        }
+
+        
     }
 }

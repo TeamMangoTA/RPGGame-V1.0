@@ -59,6 +59,14 @@ namespace rpg_Game_V1.EntityModels
             this.Info = new EntityStats(h, m, s+stamina, d, i, str);
         }
 
-       
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine(string.Format("Type: {0}", this.GetType().Name));
+            sb.AppendLine(string.Format("Name: {0}", this.Name));
+            sb.Append(this.Info.ToString());
+
+            return sb.ToString();
+        }  
     }
 }

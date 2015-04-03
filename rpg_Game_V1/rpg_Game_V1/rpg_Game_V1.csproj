@@ -44,6 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbilityModels\Ability.cs" />
+    <Compile Include="AbilityModels\AttackAbility.cs" />
+    <Compile Include="AbilityModels\Interface\IAbility.cs" />
+    <Compile Include="ActionModels\GameAction.cs" />
     <Compile Include="Engine\CoreEngine.cs" />
     <Compile Include="EntityModels\BadEntity.cs" />
     <Compile Include="EntityModels\Enemy.cs" />
