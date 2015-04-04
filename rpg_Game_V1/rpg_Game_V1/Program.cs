@@ -1,4 +1,5 @@
 ﻿using rpg_Game_V1.EntityModels;
+using rpg_Game_V1.EntityModels.RPG;
 using rpg_Game_V1.Render;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,11 @@ namespace rpg_Game_V1
             AllocConsole();
             Console.WriteLine(testEnemy);
             Console.ReadKey();
+
+            // Maze and Hero
+            //Hero myHero = new Hero(25, 25);
+            //GameMaze Maze = new GameMaze(41, 41, myHero);
+            //Maze.MazeTravel();
         }
     }
 }
