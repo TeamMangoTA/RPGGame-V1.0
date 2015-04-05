@@ -8,8 +8,15 @@ namespace rpg_Game_V1.Factories
 {
     public enum EnemyType
     {
-        BabaYaga = 0,
-        Ogre = 1,
-        RoboPesho = 2
+        Amarok, 
+        BabaYaga, 
+        BlackDog, 
+        Cyclop, 
+        Centaur,
+        Gorgon, 
+        HeadlessMule, 
+        MeteeKolenOl, 
+        Ogre, 
+        RoboPesho, 
     }
 }
