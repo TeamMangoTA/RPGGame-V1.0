@@ -93,7 +93,7 @@ namespace rpg_Game_V1.EntityModels
             result.AppendLine("Inventory: ");
             foreach (var item in Inventory)
             {
-                result.AppendLine(" - " + item.Name);
+                result.AppendLine(" - " + item.ToString());
             }
 
             return result.ToString();

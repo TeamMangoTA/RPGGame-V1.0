@@ -11,5 +11,11 @@ namespace rpg_Game_V1.Weapons
     {
         public string Name { get; set; }
         //public abstract Ability AddAbility();
-    }
+        public int EquipmentCost { get; set; }
+
+        public override string ToString()
+        {
+            return this.Name + " - used slots: " + this.EquipmentCost;
+        }
+    }   
 }

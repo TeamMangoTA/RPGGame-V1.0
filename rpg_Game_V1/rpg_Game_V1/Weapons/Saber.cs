@@ -34,5 +34,13 @@ namespace rpg_Game_V1.Weapons
                 throw new NotImplementedException();
             }
         }
+
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine(base.ToString());
+            sb.Append(string.Format("   * Dmg: {0}; Ar: {1}; Sc: {2}", this.DmgValue, this.AccuracyRating, this.StaminaCost));
+            return sb.ToString();
+        }
     }
 }

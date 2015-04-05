@@ -91,6 +91,21 @@ namespace rpg_Game_V1
 
         }
 
+        private void HeroAttackResult_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         
     }
 }
