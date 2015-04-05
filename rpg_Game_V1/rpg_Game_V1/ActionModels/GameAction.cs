@@ -5,8 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using rpg_Game_V1.AbilityModels;
-using rpg_Game_V1.EntityModels;
 
 
 namespace rpg_Game_V1.ActionModels
@@ -22,7 +20,5 @@ namespace rpg_Game_V1.ActionModels
             this.Orgin = p1;
             this.Target = p2;
         }
-
-
     }
 }

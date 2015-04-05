@@ -48,7 +48,7 @@ namespace rpg_Game_V1
 
             testEnemy.AddAbility(new LightAttackAbility(sword1));
             
-            //Console.WriteLine(testPlayer);
+            //Console.WriteLine(testPlayer);            
             testPlayer.EquipArmor(armor1);
             //Console.WriteLine(testPlayer);
             //
