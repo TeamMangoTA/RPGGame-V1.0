@@ -34,6 +34,8 @@ namespace rpg_Game_V1
             this.Mob = mob;
             this.label1.Text = this.HumanPlayer.ToString();
             this.label2.Text = this.Mob.ToString();
+            this.label3.Text = this.HumanPlayer.Name;
+            this.label4.Text = this.Mob.Name;
             this.EnemyPicture.Load(mob.Image);
             this.comboBox1.Items.AddRange(human.AbilityList());
             this.comboBox1.Items.Add("No Action");
@@ -50,13 +52,13 @@ namespace rpg_Game_V1
             switch(r)
             {
                 case 0:
-                    this.HeroAttackResult.Load(@"../../miss.jpg");
+                    this.HeroAttackResult.Load(@"../../../Media/miss.png");
                     break;
                 case 1:
-                    this.HeroAttackResult.Load(@"../../hit.jpg");
+                    this.HeroAttackResult.Load(@"../../../Media/hit.png");
                     break;
                 default:
-                    this.HeroAttackResult.Load(@"../../noattack.jpg");
+                    this.HeroAttackResult.Load(@"../../../Media/noattack.png");
                     break;
             }
             if (r == -1) { this.HumanPlayer.ChangeStamina(1); }
@@ -66,13 +68,13 @@ namespace rpg_Game_V1
             switch (r1)
             {
                 case 0:
-                    this.pictureBox2.Load(@"../../miss.jpg");
+                    this.pictureBox2.Load(@"../../../Media/miss.png");
                     break;
                 case 1:
-                    this.pictureBox2.Load(@"../../hit.jpg");
+                    this.pictureBox2.Load(@"../../../Media/hit.png");
                     break;
                 default:
-                    this.pictureBox2.Load(@"../../noattack.jpg");
+                    this.pictureBox2.Load(@"../../../Media/noattack.png");
                     break;
             }
             this.label1.Text = this.HumanPlayer.ToString();
@@ -102,6 +104,11 @@ namespace rpg_Game_V1
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
