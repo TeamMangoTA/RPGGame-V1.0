@@ -76,6 +76,7 @@
     <Compile Include="Weapons\Interface\IArmor.cs" />
     <Compile Include="Weapons\Interface\IWeapon.cs" />
     <Compile Include="Weapons\Items.cs" />
+    <Compile Include="Weapons\Names\SaberNames.cs" />
     <Compile Include="Weapons\PlateArmor.cs" />
     <Compile Include="Weapons\Saber.cs" />
     <Compile Include="Weapons\Weapon.cs" />

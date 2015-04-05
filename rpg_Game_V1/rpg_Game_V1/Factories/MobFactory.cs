@@ -34,8 +34,7 @@ namespace rpg_Game_V1.Factories
         }
 
         public Enemy CreateEnemy()
-        {
-            
+        {        
             string name = SelectRandomEnemyType();
             int health = RndGenertor.Next(50, 101);
             int mana = RndGenertor.Next(0, 101);

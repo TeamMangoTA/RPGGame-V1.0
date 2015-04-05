@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace rpg_Game_V1.Weapons.Names
 {
-    class SaberNames
+    public enum SaberNames
     {
+        Chaos,
+        Doom,
+        Excalibur,
+        Valyrian,
+        Glamdring
     }
 }

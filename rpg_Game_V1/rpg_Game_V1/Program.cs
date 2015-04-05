@@ -36,7 +36,7 @@ namespace rpg_Game_V1
             var testEnemy = factory.CreateEnemy();
             //var testEnemy=new Enemy("Billy",100,0,0,0,0,0,@"http://assets.sbnation.com/assets/795920/zergling-300.jpg",0);
             var testPlayer = new Player("Pavel", 100, 100, 5, 0, 0, 0,0);
-            AllocConsole();
+            // AllocConsole();
             var sword1 = new Saber("Doom", 10, 50, 1);
             var sword2 = new Saber("Chaos", 25, -50, 2);
             var armor1 = new PlateArmor(15);
