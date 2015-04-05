@@ -74,7 +74,7 @@
             this.EnemyPicture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.EnemyPicture.Name = "EnemyPicture";
             this.tableLayoutPanel1.SetRowSpan(this.EnemyPicture, 2);
-            this.EnemyPicture.Size = new System.Drawing.Size(430, 323);
+            this.EnemyPicture.Size = new System.Drawing.Size(430, 322);
             this.EnemyPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.EnemyPicture.TabIndex = 0;
             this.EnemyPicture.TabStop = false;

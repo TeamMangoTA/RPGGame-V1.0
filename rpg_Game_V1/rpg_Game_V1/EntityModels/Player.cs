@@ -20,8 +20,7 @@ namespace rpg_Game_V1.EntityModels
         public Player(string name,int health,int mana, int stamina,
             int dexterity, int intelligence, int strenght, int defenceRation)
             :base(name,health,mana,stamina,dexterity,intelligence,strenght,defenceRation)
-        {
-            
+        {            
         }
 
         public void AddItem(Items thing)
@@ -94,7 +93,7 @@ namespace rpg_Game_V1.EntityModels
             result.AppendLine("Inventory: ");
             foreach (var item in Inventory)
             {
-                result.AppendLine(item.Name);
+                result.AppendLine(" - " + item.Name);
             }
 
             return result.ToString();
@@ -113,11 +112,9 @@ namespace rpg_Game_V1.EntityModels
             return result.ToArray();
         }
 
-        
-
         public override string ToString()
         {
-            return base.ToString()+Environment.NewLine+ this.InventoryList()+this.AbilityList();
+            return base.ToString() + Environment.NewLine + this.InventoryList() + "AbilityList:\n - " + string.Join("\n - ", this.AbilityList());
         }
     }
 }

@@ -42,6 +42,7 @@ namespace rpg_Game_V1
             var armor1 = new PlateArmor(15);
 
             testPlayer.AddItem(sword1);
+            testPlayer.AddItem(sword2);
             testPlayer.EquipWeapon(sword1);
             testPlayer.EquipWeapon(sword2);
 
