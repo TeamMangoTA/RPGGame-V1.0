@@ -45,7 +45,7 @@ namespace rpg_Game_V1.ActionModels
 
         }
 
-        public bool Resolve()
+        public int Resolve()
         {
             this.Orgin.ChangeMana(-this.ManaEffect);
             this.Orgin.ChangeStamina(-this.StaminaEffect);
@@ -53,20 +53,15 @@ namespace rpg_Game_V1.ActionModels
             if (this.Defend == false)
             {
                 this.Target.ChangeHealth(-this.DmgValue);
-                
-               
+                return 1;
             }
             else
             {
                 Console.WriteLine("Blocked");
+                return 0;
             }
-
-            return this.Defend;
         }
 
-        public void HitResponse()
-        {
-            Application.Run(new Form2());
-        }
+        
     }
 }

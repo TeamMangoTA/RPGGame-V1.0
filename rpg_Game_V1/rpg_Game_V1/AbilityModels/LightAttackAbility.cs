@@ -50,6 +50,11 @@ namespace rpg_Game_V1.AbilityModels
             return new WeaponAttack(player,mob,this);
         }
 
+        public override string ToString()
+        {
+            return this.Name + string.Format("Stamina Cost: {0}", this.StaminaEffect);
+        }
+
         
     }
 }

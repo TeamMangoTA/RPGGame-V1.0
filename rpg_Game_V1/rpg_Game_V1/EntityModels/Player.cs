@@ -67,11 +67,11 @@ namespace rpg_Game_V1.EntityModels
             }
         }
 
-        public bool DoAttack(Enemy target, int n)
+        public int DoAttack(Enemy target, int n)
         {
-            var r = true;
+            var r = -1;
             int ch = n;
-            if (ch < 0) { return true; }
+            if (ch < 0) { return -1; }
             var tempattack = (LightAttackAbility)attacks[ch];
             if (this.Info.Stamina >= tempattack.StaminaEffect)
             {
@@ -92,19 +92,20 @@ namespace rpg_Game_V1.EntityModels
             return result.ToString();
         }
 
-        public string AbilityList()
+        public string[] AbilityList()
         {
-            StringBuilder result = new StringBuilder();
-            result.AppendLine("Skill: ");
+            List<string> result = new List<string>();
+
             foreach (var item in attacks)
             {
-                result.AppendLine(item.Name);
+                result.Add(item.ToString());
+
             }
 
-            return result.ToString();
+            return result.ToArray();
         }
 
-        private bool DoAttack(Enemy target, Ability a)
+        private int DoAttack(Enemy target, Ability a)
         {
             var skill = (LightAttackAbility)a;
             var action = skill.CreatAction(this, target);
