@@ -33,13 +33,20 @@ namespace rpg_Game_V1
             this.HumanPlayer = human;
             this.Mob = mob;
             this.label1.Text = this.HumanPlayer.ToString();
+            this.label2.Text = this.Mob.ToString();
             this.EnemyPicture.Load(mob.Image);
             this.comboBox1.Items.AddRange(human.AbilityList());
+            this.comboBox1.Items.Add("No Action");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var r=this.HumanPlayer.DoAttack(this.Mob, this.comboBox1.SelectedIndex);
+            var r = -1;
+            if (this.comboBox1.SelectedIndex != this.comboBox1.Items.Count - 1)
+            {
+                r = this.HumanPlayer.DoAttack(this.Mob, this.comboBox1.SelectedIndex);
+            }
+            
             switch(r)
             {
                 case 0:
@@ -52,11 +59,25 @@ namespace rpg_Game_V1
                     this.HeroAttackResult.Load(@"../../noattack.jpg");
                     break;
             }
-            this.label1.Text = this.HumanPlayer.ToString();
-            this.label2.Text = this.comboBox1.SelectedIndex.ToString();
-            this.Update();
+            if (r == -1) { this.HumanPlayer.ChangeStamina(1); }
 
-            
+            var r1 = this.Mob.DoAttack(this.HumanPlayer, 0);
+
+            switch (r1)
+            {
+                case 0:
+                    this.pictureBox2.Load(@"../../miss.jpg");
+                    break;
+                case 1:
+                    this.pictureBox2.Load(@"../../hit.jpg");
+                    break;
+                default:
+                    this.pictureBox2.Load(@"../../noattack.jpg");
+                    break;
+            }
+            this.label1.Text = this.HumanPlayer.ToString();
+            this.label2.Text = this.Mob.ToString();
+            this.Update();
 
         }
 

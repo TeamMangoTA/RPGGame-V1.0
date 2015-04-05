@@ -79,7 +79,15 @@ namespace rpg_Game_V1.EntityModels
             }
             return r;
         }
+        private int DoAttack(Enemy target, Ability a)
+        {
+            var skill = (LightAttackAbility)a;
+            var action = skill.CreatAction(this, target);
+            var resolution = action;
+            var r=resolution.Resolve();
 
+            return r;
+        }
         public string InventoryList()
         {
             StringBuilder result = new StringBuilder();
@@ -105,15 +113,7 @@ namespace rpg_Game_V1.EntityModels
             return result.ToArray();
         }
 
-        private int DoAttack(Enemy target, Ability a)
-        {
-            var skill = (LightAttackAbility)a;
-            var action = skill.CreatAction(this, target);
-            var resolution = action;
-            var r=resolution.Resolve();
-
-            return r;
-        }
+        
 
         public override string ToString()
         {

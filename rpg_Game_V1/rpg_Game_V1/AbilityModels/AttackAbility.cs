@@ -8,10 +8,9 @@ using System.Threading.Tasks;
 
 namespace rpg_Game_V1.AbilityModels
 {
-    abstract public class AttackAbility:Ability
+    public abstract class AttackAbility:Ability
     {
         
-
         public override string AbilityType
         {
             get

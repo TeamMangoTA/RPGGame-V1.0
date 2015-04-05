@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace rpg_Game_V1.Weapons
 {
-    class Saber : Weapon, IWeapon
+    public class Saber : Weapon, IWeapon
     {
         public int DmgValue { get; set; }
         public int AccuracyRating { get; set; }

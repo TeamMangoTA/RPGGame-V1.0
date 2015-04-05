@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace rpg_Game_V1.AbilityModels
 {
-    class LightAttackAbility:AttackAbility
+    public class LightAttackAbility:AttackAbility
     {
 
         public int HealtDmg { get; set; }
@@ -45,9 +45,18 @@ namespace rpg_Game_V1.AbilityModels
 
         public WeaponAttack CreatAction(Entity origin,Entity target)
         {
-            var player = (Player)origin;
-            var mob = (Enemy)target;
-            return new WeaponAttack(player,mob,this);
+            if (origin is Player)
+            {
+                var player = (Player)origin;
+                var mob = (Enemy)target;
+                return new WeaponAttack(player, mob, this);
+            }
+            else
+            {
+                var player = (Enemy)origin;
+                var mob = (Player)target;
+                return new WeaponAttack(player, mob, this);
+            }
         }
 
         public override string ToString()

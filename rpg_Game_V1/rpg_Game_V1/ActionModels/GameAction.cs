@@ -17,7 +17,7 @@ namespace rpg_Game_V1.ActionModels
         public Entity Target { get; set; }
 
 
-        public GameAction(Player p1, Enemy p2, Ability a1)
+        public GameAction(Entity p1, Entity p2, Ability a1)
         {
             this.Orgin = p1;
             this.Target = p2;
