@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace rpg_Game_V1.Weapons
 {
-    public abstract class Weapon:Items
+    public abstract class Items
     {
-        public int EquipmentCost { get; set; }
-        
+        public string Name { get; set; }
+        //public abstract Ability AddAbility();
     }
 }

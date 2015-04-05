@@ -1,4 +1,6 @@
 ﻿using rpg_Game_V1.AbilityModels;
+using rpg_Game_V1.ActionModels;
+using rpg_Game_V1.Weapons;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,17 +9,107 @@ using System.Threading.Tasks;
 
 namespace rpg_Game_V1.EntityModels
 {
-    class Player:GoodEntity
+    public class Player:GoodEntity
     {
-        List<Ability> Skills = new List<Ability>();
-
-
+        List<AttackAbility> attacks = new List<AttackAbility>();
+        List<Items> Inventory = new List<Items>();
+        List<Items> Equiped = new List<Items>();
+        int weaponCapacity = 2;
+        int armorCapacity = 1;
 
         public Player(string name,int health,int mana, int stamina,
-            int dexterity, int intelligence, int strenght)
-            :base(name,health,mana,stamina,dexterity,intelligence,strenght)
+            int dexterity, int intelligence, int strenght, int defenceRation)
+            :base(name,health,mana,stamina,dexterity,intelligence,strenght,defenceRation)
         {
             
+        }
+
+        public void AddItem(Items thing)
+        {
+            this.Inventory.Add(thing);
+            var temp = (Saber)thing;
+
+            //attacks.Add(new LightAttackAbility(temp));
+        }
+
+        public void EquipWeapon(Items thing)
+        {
+            if(thing is Weapon)
+            {
+                if(weaponCapacity>0)
+                {
+                    Equiped.Add(thing);
+                   
+                    var temp = (Saber)thing;
+
+                    attacks.Add(new LightAttackAbility(temp));
+                    weaponCapacity--;
+                }
+
+                //else { Console.WriteLine("Not Allowed"); }
+            }
+        }
+
+        public void EquipArmor(Items thing)
+        {
+            if (thing is PlateArmor)
+            {
+                if (weaponCapacity > 0)
+                {
+                    Equiped.Add(thing);
+
+                    armorCapacity--;
+                    var temp = (PlateArmor)thing;
+                    this.ChangeDefence(temp.DefRatingMod);
+                }
+
+                //else { Console.WriteLine("Not Allowed"); }
+            }
+        }
+
+        public void DoAttack(Enemy target, int n)
+        {
+            int ch = n;
+            if (ch < 0) { return; }
+            var tempattack = attacks[ch];
+            this.DoAttack(target, tempattack);
+        }
+
+        public string InventoryList()
+        {
+            StringBuilder result = new StringBuilder();
+            result.AppendLine("Inventory: ");
+            foreach (var item in Inventory)
+            {
+                result.AppendLine(item.Name);
+            }
+
+            return result.ToString();
+        }
+
+        public string AbilityList()
+        {
+            StringBuilder result = new StringBuilder();
+            result.AppendLine("Skill: ");
+            foreach (var item in attacks)
+            {
+                result.AppendLine(item.Name);
+            }
+
+            return result.ToString();
+        }
+
+        private void DoAttack(Enemy target, Ability a)
+        {
+            var skill = (LightAttackAbility)a;
+            var action = skill.CreatAction(this, target);
+            var resolution = action;
+            resolution.Resolve();
+        }
+
+        public override string ToString()
+        {
+            return base.ToString()+Environment.NewLine+ this.InventoryList()+this.AbilityList();
         }
     }
 }

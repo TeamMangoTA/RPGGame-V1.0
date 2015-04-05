@@ -18,7 +18,7 @@ namespace rpg_Game_V1.EntityModels
 
         public int DefenceRating { get; set; }
 
-        public EntityStats(int health, int mana, int stamina, int dex, int intelligence, int strenght):this()
+        public EntityStats(int health, int mana, int stamina, int dex, int intelligence, int strenght, int dr):this()
         {
             this.Health = health;
             this.Mana = mana;
@@ -26,6 +26,7 @@ namespace rpg_Game_V1.EntityModels
             this.Dex = dex;
             this.Int = intelligence;
             this.Str = strenght;
+            this.DefenceRating = dr;
         }
 
         public override string ToString()
@@ -37,7 +38,8 @@ namespace rpg_Game_V1.EntityModels
             sb.AppendLine(string.Format(" - {1,-13} {0}", this.Stamina, "Stamina:"));
             sb.AppendLine(string.Format(" - {1,-13} {0}", this.Dex, "Dexterity:"));
             sb.AppendLine(string.Format(" - {1,-13} {0}", this.Int, "Intelligence:"));
-            sb.Append(string.Format(" - {1,-13} {0}", this.Str, "Strength:"));
+            sb.AppendLine(string.Format(" - {1,-13} {0}", this.Str, "Strength:"));
+            sb.Append(string.Format(" - {1,-13} {0}", this.DefenceRating, "Defence:"));
 
             return sb.ToString();
         }

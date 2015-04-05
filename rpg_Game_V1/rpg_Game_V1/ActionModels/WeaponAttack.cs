@@ -13,6 +13,8 @@ namespace rpg_Game_V1.ActionModels
     {
         public int DmgValue { get; set; }
         //public string ID { get; set; }
+        public int ManaEffect { get; set; }
+        public int StaminaEffect { get; set; }
 
         public bool Defend
         {
@@ -20,12 +22,15 @@ namespace rpg_Game_V1.ActionModels
             set;
         }
 
-        public WeaponAttack(Player p1, Enemy p2, Ability a1)
+        public WeaponAttack(Player p1, Enemy p2, LightAttackAbility a1)
             : base(p1, p2, a1)
         {
 
-            var temp = (AttackAbility)a1;
+            var temp = a1;
             this.DmgValue = temp.HealtDmg;
+            this.ManaEffect = temp.ManaEffect;
+            this.StaminaEffect = temp.StaminaEffect;
+
             if (p2.Info.DefenceRating > temp.HitModf)
             {
                 this.Defend = true;
@@ -39,9 +44,13 @@ namespace rpg_Game_V1.ActionModels
 
         public void Resolve()
         {
+            this.Orgin.ChangeMana(-this.ManaEffect);
+            this.Orgin.ChangeStamina(-this.StaminaEffect);
+
             if (this.Defend == false)
             {
                 this.Target.ChangeHealth(-this.DmgValue);
+               
             }
             else
             {

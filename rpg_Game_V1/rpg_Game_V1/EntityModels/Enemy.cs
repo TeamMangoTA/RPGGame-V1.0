@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace rpg_Game_V1.EntityModels
 {
-    class Enemy:BadEntity,IEntity
+    public class Enemy:BadEntity,IEntity
     {
         public string Image { get; set; }
 
         public Enemy(string name,int health,int mana, int stamina,
-            int dexterity, int intelligence, int strenght, string imageLoc)
-            :base(name,health,mana,stamina,dexterity,intelligence,strenght)
+            int dexterity, int intelligence, int strenght, string imageLoc, int defenceRation)
+            :base(name,health,mana,stamina,dexterity,intelligence,strenght,defenceRation)
         {
             this.Image = imageLoc;
         }

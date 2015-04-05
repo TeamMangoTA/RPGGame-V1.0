@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace rpg_Game_V1.Weapons
 {
-    public abstract class MeleW : Weapon
+    abstract class Armor:Items
     {
-        public virtual string GetType()
-        {
-            return "Mele";
-        }
+        public int EquipmentCost { get; set; }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace rpg_Game_V1.Weapons
 {
-    class Saber : MeleW, IWeapon
+    class Saber : Weapon, IWeapon
     {
         public int DmgValue { get; set; }
         public int AccuracyRating { get; set; }
@@ -20,15 +20,8 @@ namespace rpg_Game_V1.Weapons
             this.DmgValue = dmg;
             this.AccuracyRating = acc;
             this.StaminaCost = staminacost;
+            this.EquipmentCost = 1;
         }
-
-        public override Ability AddAbility()
-        {
-            var temp = new AttackAbility(this.DmgValue, this.StaminaCost, 0, this.AccuracyRating, this.Name);
-
-            return (Ability)temp;
-        }
-
 
         public int HitMod
         {
