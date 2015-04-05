@@ -8,6 +8,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using rpg_Game_V1.Factories;
 
 namespace rpg_Game_V1
 {
@@ -29,8 +30,11 @@ namespace rpg_Game_V1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form2());
+            var factory = MobFactory.Instance;
 
-            var testEnemy=new Enemy("Billy",100,0,0,0,0,0,@"http://assets.sbnation.com/assets/795920/zergling-300.jpg",0);
+
+            var testEnemy = factory.CreateEnemy();
+            //var testEnemy=new Enemy("Billy",100,0,0,0,0,0,@"http://assets.sbnation.com/assets/795920/zergling-300.jpg",0);
             var testPlayer = new Player("Pavel", 100, 100, 5, 0, 0, 0,0);
             AllocConsole();
             var sword1 = new Saber("Doom", 10, 50, 1);

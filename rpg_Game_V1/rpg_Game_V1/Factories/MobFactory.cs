@@ -43,7 +43,7 @@ namespace rpg_Game_V1.Factories
             int intelligence = RndGenertor.Next(10, 101);
             int strenght = RndGenertor.Next(10, 101);
             int defenceRation = RndGenertor.Next(10, 101);
-            string imageLocation = string.Format("Media/../{0}.jpg", name);
+            string imageLocation = string.Format("../../../Media/{0}.jpg", name);
 
             Enemy newEnemy = new Enemy(name, health, mana, stamina, dexterity, intelligence, strenght, imageLocation, defenceRation);
 
