@@ -1,4 +1,5 @@
-﻿using rpg_Game_V1.EntityModels;
+﻿using rpg_Game_V1.AbilityModels;
+using rpg_Game_V1.EntityModels;
 using rpg_Game_V1.Render;
 using rpg_Game_V1.Weapons;
 using System;
@@ -27,21 +28,30 @@ namespace rpg_Game_V1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new CombatScreen());
+            //Application.Run(new Form2());
 
             var testEnemy=new Enemy("Billy",100,0,0,0,0,0,@"http://assets.sbnation.com/assets/795920/zergling-300.jpg",0);
             var testPlayer = new Player("Pavel", 100, 100, 5, 0, 0, 0,0);
             AllocConsole();
             var sword1 = new Saber("Doom", 10, 50, 1);
+            var sword2 = new Saber("Chaos", 25, -50, 2);
+            var armor1 = new PlateArmor(15);
+
             testPlayer.AddItem(sword1);
             testPlayer.EquipWeapon(sword1);
-            var armor1 = new PlateArmor(15);
-            Console.WriteLine(testPlayer);
-            testPlayer.EquipArmor(armor1);
-            Console.WriteLine(testPlayer);
+            testPlayer.EquipWeapon(sword2);
 
-            Console.ReadLine();
-           
+            testEnemy.AddAbility(new LightAttackAbility(sword1));
+            
+            //Console.WriteLine(testPlayer);
+            testPlayer.EquipArmor(armor1);
+            //Console.WriteLine(testPlayer);
+            //
+            //Console.ReadLine();
+
+            var test = new CombatScreen(testPlayer,testEnemy );
+            test.ShowDialog();
+
         }
     }
 }
