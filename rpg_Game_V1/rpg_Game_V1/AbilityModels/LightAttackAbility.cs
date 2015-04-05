@@ -61,7 +61,7 @@ namespace rpg_Game_V1.AbilityModels
 
         public override string ToString()
         {
-            return this.Name + string.Format(" Stamina Cost: {0}", this.StaminaEffect);
+            return this.Name + string.Format(" - Sc: {0}", this.StaminaEffect);
         }
     }
 }

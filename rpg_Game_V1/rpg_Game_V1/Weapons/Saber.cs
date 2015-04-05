@@ -39,7 +39,7 @@ namespace rpg_Game_V1.Weapons
         {
             var sb = new StringBuilder();
             sb.AppendLine(base.ToString());
-            sb.Append(string.Format("   * Dmg: {0}; Ar: {1}; Sc: {2}", this.DmgValue, this.AccuracyRating, this.StaminaCost));
+            sb.Append(string.Format("   ∙ Dmg: {0,-4}  Ar: {1,-4}  Sc: {2,-4}", this.DmgValue, this.AccuracyRating, this.StaminaCost));
             return sb.ToString();
         }
     }
