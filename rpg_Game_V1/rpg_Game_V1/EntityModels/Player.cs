@@ -67,12 +67,13 @@ namespace rpg_Game_V1.EntityModels
             }
         }
 
-        public void DoAttack(Enemy target, int n)
+        public bool DoAttack(Enemy target, int n)
         {
             int ch = n;
-            if (ch < 0) { return; }
+            if (ch < 0) { return true; }
             var tempattack = attacks[ch];
-            this.DoAttack(target, tempattack);
+            var r=this.DoAttack(target, tempattack);
+            return r;
         }
 
         public string InventoryList()
@@ -99,12 +100,14 @@ namespace rpg_Game_V1.EntityModels
             return result.ToString();
         }
 
-        private void DoAttack(Enemy target, Ability a)
+        private bool DoAttack(Enemy target, Ability a)
         {
             var skill = (LightAttackAbility)a;
             var action = skill.CreatAction(this, target);
             var resolution = action;
-            resolution.Resolve();
+            var r=resolution.Resolve();
+
+            return r;
         }
 
         public override string ToString()

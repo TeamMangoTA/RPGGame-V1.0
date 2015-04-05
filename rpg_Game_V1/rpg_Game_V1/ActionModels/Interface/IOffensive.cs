@@ -11,7 +11,7 @@ namespace rpg_Game_V1.ActionModels.Interface
         int DmgValue { get; set; }
         bool Defend { get; set; }
 
-        void Resolve();
+        bool Resolve();
     }
     
 }

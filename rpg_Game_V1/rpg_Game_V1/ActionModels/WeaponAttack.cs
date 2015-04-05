@@ -5,7 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace rpg_Game_V1.ActionModels
 {
@@ -38,11 +40,12 @@ namespace rpg_Game_V1.ActionModels
             else
             {
                 this.Defend = false;
+                
             }
 
         }
 
-        public void Resolve()
+        public bool Resolve()
         {
             this.Orgin.ChangeMana(-this.ManaEffect);
             this.Orgin.ChangeStamina(-this.StaminaEffect);
@@ -50,12 +53,20 @@ namespace rpg_Game_V1.ActionModels
             if (this.Defend == false)
             {
                 this.Target.ChangeHealth(-this.DmgValue);
+                
                
             }
             else
             {
                 Console.WriteLine("Blocked");
             }
+
+            return this.Defend;
+        }
+
+        public void HitResponse()
+        {
+            Application.Run(new Form2());
         }
     }
 }
