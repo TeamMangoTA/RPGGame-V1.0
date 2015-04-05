@@ -69,10 +69,14 @@ namespace rpg_Game_V1.EntityModels
 
         public bool DoAttack(Enemy target, int n)
         {
+            var r = true;
             int ch = n;
             if (ch < 0) { return true; }
-            var tempattack = attacks[ch];
-            var r=this.DoAttack(target, tempattack);
+            var tempattack = (LightAttackAbility)attacks[ch];
+            if (this.Info.Stamina >= tempattack.StaminaEffect)
+            {
+                r = this.DoAttack(target, tempattack);
+            }
             return r;
         }
 
