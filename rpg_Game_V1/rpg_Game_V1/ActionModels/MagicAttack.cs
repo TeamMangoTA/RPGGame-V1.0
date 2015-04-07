@@ -1,19 +1,17 @@
-﻿using rpg_Game_V1.AbilityModels;
-using rpg_Game_V1.ActionModels.Interface;
-using rpg_Game_V1.EntityModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using rpg_Game_V1.AbilityModels;
+using rpg_Game_V1.ActionModels.Interface;
+using rpg_Game_V1.EntityModels;
 
 namespace rpg_Game_V1.ActionModels
 {
-    public class WeaponAttack : OffensiveA, IOffensive
+    class MagicAttack:OffensiveA,IOffensive
     {
-        public int DmgValue { get; set; }
+         public int DmgValue { get; set; }
         //public string ID { get; set; }
         public int ManaEffect { get; set; }
         public int StaminaEffect { get; set; }
@@ -24,7 +22,7 @@ namespace rpg_Game_V1.ActionModels
             set;
         }
 
-        public WeaponAttack(Player p1, Enemy p2, LightAttackAbility a1)
+        public MagicAttack(Player p1, Enemy p2, LightMagicAbility a1)
             : base(p1, p2, a1)
         {
 
@@ -45,7 +43,7 @@ namespace rpg_Game_V1.ActionModels
 
         }
 
-        public WeaponAttack(Enemy p1, Player p2, LightAttackAbility a1)
+        public MagicAttack(Enemy p1, Player p2, LightMagicAbility a1)
             : base(p1, p2, a1)
         {
 
@@ -83,6 +81,5 @@ namespace rpg_Game_V1.ActionModels
             }
         }
 
-        
     }
 }

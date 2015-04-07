@@ -11,8 +11,7 @@ namespace rpg_Game_V1.AbilityModels
     public class DeffAbility:Ability,IAbility
     {
         public int HealtDmg { get; set; }
-        public int StaminaEffect { get; set; }
-        public int ManaEffect { get; set; }
+    
         public int HitModf { get; set; }
 
         public override string AbilityType
