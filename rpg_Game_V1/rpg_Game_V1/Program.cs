@@ -25,7 +25,7 @@ namespace rpg_Game_V1
 
 
         [STAThread]
-        static void Main()
+        public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
