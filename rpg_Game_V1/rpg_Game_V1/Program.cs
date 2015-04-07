@@ -42,6 +42,7 @@ namespace rpg_Game_V1
             var staff1 = new DarkStaff("Boom", 90, 70, 40);
             var staff2 = new DarkStaff("THis staff", 15, 40, 10);
             var armor1 = new PlateArmor(15);
+            var ring = new Trinket("Ring", 30, 0, 0);
 
             //testPlayer.AddItem(sword1);
             //testPlayer.AddItem(sword2);
@@ -51,6 +52,7 @@ namespace rpg_Game_V1
             testPlayer.AddItem(staff2);
             testPlayer.EquipWeapon(staff1);
             testPlayer.EquipWeapon(staff2);
+            testPlayer.EqipTrinket(ring);
 
 
             testEnemy.AddAbility(new LightAttackAbility(sword1));
