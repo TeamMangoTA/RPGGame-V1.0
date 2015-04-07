@@ -39,13 +39,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-<<<<<<< HEAD
+
             this.label2 = new System.Windows.Forms.Label();
             this.EnemyPicture = new System.Windows.Forms.PictureBox();
-=======
-            this.EnemyPicture = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
->>>>>>> origin/master
+
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -181,15 +178,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-<<<<<<< HEAD
+
             this.label5.Location = new System.Drawing.Point(85, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 15);
-=======
-            this.label5.Location = new System.Drawing.Point(98, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 12);
->>>>>>> origin/master
+
             this.label5.TabIndex = 3;
             this.label5.Text = "SELECT ITEM:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -202,17 +195,12 @@
             this.comboBox1.Font = new System.Drawing.Font("Lucida Console", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.ForeColor = System.Drawing.SystemColors.Window;
             this.comboBox1.FormattingEnabled = true;
-<<<<<<< HEAD
+
             this.comboBox1.Location = new System.Drawing.Point(4, 19);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(277, 21);
-=======
-            this.comboBox1.Location = new System.Drawing.Point(4, 16);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(277, 18);
->>>>>>> origin/master
+
             this.comboBox1.TabIndex = 2;
             // 
             // button1
@@ -222,28 +210,21 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
             this.button1.FlatAppearance.BorderSize = 4;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-<<<<<<< HEAD
+
             this.button1.Font = new System.Drawing.Font("MetalShred", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.DarkGreen;
             this.button1.Location = new System.Drawing.Point(4, 48);
-=======
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.button1.Location = new System.Drawing.Point(4, 43);
->>>>>>> origin/master
+
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(277, 69);
             this.button1.TabIndex = 1;
-<<<<<<< HEAD
+
             this.button1.Text = "USE";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-=======
-            this.button1.Text = "Select";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+
             // 
             // EnemyPicture
             // 
@@ -256,7 +237,7 @@
             this.EnemyPicture.TabIndex = 0;
             this.EnemyPicture.TabStop = false;
             // 
->>>>>>> origin/master
+
             // label2
             // 
             this.label2.AutoSize = true;
@@ -272,7 +253,7 @@
             this.label2.Text = "label2";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-<<<<<<< HEAD
+
             // EnemyPicture
             // 
             this.EnemyPicture.Location = new System.Drawing.Point(9, 9);
@@ -283,8 +264,7 @@
             this.EnemyPicture.TabIndex = 6;
             this.EnemyPicture.TabStop = false;
             // 
-=======
->>>>>>> origin/master
+
             // CombatScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
