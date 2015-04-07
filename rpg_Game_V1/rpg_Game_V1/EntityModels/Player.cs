@@ -220,7 +220,7 @@ namespace rpg_Game_V1.EntityModels
         {
             StringBuilder result = new StringBuilder();
             result.AppendLine("Inventory: ");
-            foreach (var item in Inventory)
+            foreach (var item in this.Equiped)
             {
                 result.AppendLine(" - " + item.ToString());
             }

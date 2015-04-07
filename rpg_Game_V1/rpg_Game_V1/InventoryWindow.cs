@@ -72,6 +72,7 @@ namespace rpg_Game_V1
             this.InventoryItems.Text = string.Join("\n", Human.Inventory);
             this.comboBoxEquip.Items.Clear();
             this.comboBoxEquip.Items.AddRange(this.ItemsNames());
+            this.comboBoxEquip.ResetText();
             this.Update();
         }
 
@@ -126,7 +127,10 @@ namespace rpg_Game_V1
 
             if (item is Trinket)
             {
-                this.Human.UneqipTrinket(item);                
+                this.Human.UneqipTrinket(item);
+                this.pictureBox4.Image = null;
+                this.StatsTrinketLabel.Text = "";
+                
             }
             else if(item is Armor)
             {
@@ -140,7 +144,10 @@ namespace rpg_Game_V1
             this.InventoryItems.Text = string.Join("\n", Human.Inventory);
             this.comboBoxEquip.Items.Clear();
             this.comboBoxEquip.Items.AddRange(this.ItemsNames());
-            
+            this.SetUpEquipment();
+
+            this.comboBoxEquip.ResetText();
+            this.Update();
         }
 
 
