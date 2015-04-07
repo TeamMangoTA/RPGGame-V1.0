@@ -135,10 +135,23 @@ namespace rpg_Game_V1
             else if(item is Armor)
             {
                 this.Human.UneqipArmour(item);
+                this.pictureBox3.Image = null;
+                this.StatsArmorLabel.Text = "";
             }
             else
             {
                 this.Human.UneqipWeapon(item);
+
+                if(item.ToString()==this.WeaponOneLabel.Text)
+                {
+                    this.pictureBox1.Image = null;
+                    this.StatsWeaponOneLabel.Text = "";
+                }
+                else
+                {
+                    this.pictureBox2.Image = null;
+                    this.StatsWeaponTwooLabel.Text = "";
+                }
             }
 
             this.InventoryItems.Text = string.Join("\n", Human.Inventory);
