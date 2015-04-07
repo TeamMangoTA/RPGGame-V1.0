@@ -82,7 +82,12 @@ namespace rpg_Game_V1
             int count = 0;
             foreach (var item in this.Human.Equiped)
             {
-                if(item is Weapon)
+                if (item is Trinket)
+                {
+                    this.pictureBox4.Load(item.Image);
+                    this.StatsTrinketLabel.Text = item.ToString();
+                }
+                else if(item is Weapon)
                 {
                  
                     switch(count)
@@ -101,24 +106,17 @@ namespace rpg_Game_V1
                     }
                     count++;
                 }
-                else if(item is Armor)
+                else 
                 {
                
                     this.pictureBox3.Load(item.Image);
                     this.StatsArmorLabel.Text = item.ToString();
-                }
-                else
-                {
-                    this.pictureBox4.Load(item.Image);
-                    this.StatsTrinketLabel.Text = item.ToString();
-                }
+                }               
 
                 equipment.Add(item.ToString());
             }
 
             this.comboBoxUnequip.Items.AddRange(equipment.ToArray());
-
-
         }
 
         private void buttonUnequip_Click(object sender, EventArgs e)
@@ -126,9 +124,9 @@ namespace rpg_Game_V1
             var index = this.comboBoxUnequip.SelectedIndex;
             var item = this.Human.Equiped[index];
 
-            if(item is Weapon)
+            if (item is Trinket)
             {
-                this.Human.UneqipWeapon(item);
+                this.Human.UneqipTrinket(item);                
             }
             else if(item is Armor)
             {
@@ -136,7 +134,7 @@ namespace rpg_Game_V1
             }
             else
             {
-                this.Human.UneqipTrinket(item);
+                this.Human.UneqipWeapon(item);
             }
 
             this.InventoryItems.Text = string.Join("\n", Human.Inventory);
