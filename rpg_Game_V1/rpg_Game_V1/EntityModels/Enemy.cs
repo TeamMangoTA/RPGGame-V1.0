@@ -1,5 +1,7 @@
 ﻿using rpg_Game_V1.AbilityModels;
 using rpg_Game_V1.EntityModels.Interfaces;
+using rpg_Game_V1.Factories;
+using rpg_Game_V1.Weapons;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +14,7 @@ namespace rpg_Game_V1.EntityModels
     {
         List<AttackAbility> attacks = new List<AttackAbility>();
         Random rng = new Random();
+        Items dropItem;
 
         public string Image { get; set; }
 
@@ -20,7 +23,7 @@ namespace rpg_Game_V1.EntityModels
             :base(name,health,mana,stamina,dexterity,intelligence,strenght,defenceRation)
         {
             this.Image = imageLoc;
-
+            this.dropItem = ItemFactory.CreateRandomItem();
         }
 
         public void AddAbility(LightAttackAbility a)

@@ -58,12 +58,14 @@
     <Compile Include="ActionModels\MagicAttack.cs" />
     <Compile Include="ActionModels\OffensiveA.cs" />
     <Compile Include="ActionModels\WeaponAttack.cs" />
+    <Compile Include="BattlePath.cs" />
     <Compile Include="ChoiceWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChoiceWindow.Designer.cs">
       <DependentUpon>ChoiceWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enaemy.cs" />
     <Compile Include="Engine\CoreEngine.cs" />
     <Compile Include="EntityModels\BadEntity.cs" />
     <Compile Include="EntityModels\Enemy.cs" />
