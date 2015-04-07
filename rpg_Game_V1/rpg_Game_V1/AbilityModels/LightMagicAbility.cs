@@ -1,17 +1,16 @@
-﻿using rpg_Game_V1.ActionModels;
-using rpg_Game_V1.EntityModels;
-using rpg_Game_V1.Weapons;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using rpg_Game_V1.ActionModels;
+using rpg_Game_V1.EntityModels;
+using rpg_Game_V1.Weapons;
 
 namespace rpg_Game_V1.AbilityModels
 {
-    public class LightAttackAbility:AttackAbility
+    class LightMagicAbility:AttackAbility
     {
-
         public int HealtDmg { get; set; }
         
         public int HitModf { get; set; }
@@ -24,7 +23,7 @@ namespace rpg_Game_V1.AbilityModels
             }
         }
 
-        public LightAttackAbility(int healthDamage, int staminaCost, int manaCost, int hitPercent, string name)
+        public LightMagicAbility(int healthDamage, int staminaCost, int manaCost, int hitPercent, string name)
         {
             this.HealtDmg = healthDamage;
             this.StaminaEffect = staminaCost;
@@ -32,36 +31,36 @@ namespace rpg_Game_V1.AbilityModels
             this.HitModf = hitPercent;
             this.Name = name;
         }
-
-        public LightAttackAbility(Saber sword)
+        public LightMagicAbility(DarkStaff staff)
         {
-            this.HealtDmg = sword.DmgValue;
-            this.ManaEffect = 0;
-            this.StaminaEffect = sword.StaminaCost;
-            this.HitModf = sword.AccuracyRating;
-            this.Name = sword.Name + " Light Attack";
+            this.HealtDmg = staff.DmgValue ;
+            this.ManaEffect = staff.ManaCost;
+            this.StaminaEffect = 0;
+            this.HitModf = staff.AccuracyRating;
+            this.Name = staff.Name + " Light Attack";
         }
-        public LightAttackAbility(Saber sword,Entity owner)
+       
+        public LightMagicAbility(DarkStaff staff,Entity owner)
         {
-            this.HealtDmg = sword.DmgValue + owner.Info.Str;
-            this.ManaEffect = 0;
-            this.StaminaEffect = sword.StaminaCost;
-            this.HitModf = sword.AccuracyRating;
-            this.Name = sword.Name + " Light Attack";
+            this.HealtDmg = staff.DmgValue + owner.Info.Int;
+            this.ManaEffect = staff.ManaCost;
+            this.StaminaEffect = 0;
+            this.HitModf = staff.AccuracyRating;
+            this.Name = staff.Name + " Light Attack";
         }
-        public WeaponAttack CreatAction(Entity origin,Entity target)
+        public MagicAttack CreatAction(Entity origin,Entity target)
         {
             if (origin is Player)
             {
                 var player = (Player)origin;
                 var mob = (Enemy)target;
-                return new WeaponAttack(player, mob, this);
+                return new MagicAttack(player, mob, this);
             }
             else
             {
                 var player = (Enemy)origin;
                 var mob = (Player)target;
-                return new WeaponAttack(player, mob, this);
+                return new MagicAttack(player, mob, this);
             }
         }
 
@@ -70,4 +69,5 @@ namespace rpg_Game_V1.AbilityModels
             return this.Name + string.Format(" - Sc: {0}", this.StaminaEffect);
         }
     }
-}
+ }
+
