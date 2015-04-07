@@ -95,7 +95,7 @@ namespace rpg_Game_V1.EntityModels
         {
             if (thing is PlateArmor)
             {
-                if (weaponCapacity > 0)
+                if (armorCapacity > 0)
                 {
                     Equiped.Add(thing);
 
@@ -104,7 +104,7 @@ namespace rpg_Game_V1.EntityModels
                     this.ChangeDefence(temp.DefRatingMod);
                 }
 
-                this.armorCapacity--;
+                
                 this.Inventory.Remove(thing);
             }
         }
@@ -128,12 +128,15 @@ namespace rpg_Game_V1.EntityModels
         {
             if (thing is Trinket)
             {
-                Equiped.Add(thing);
-                var temp = (Trinket)thing;
-                attacks.Add(new HealAbility(temp));
-                this.ChangeHealth(temp.DmgValue);
-                trinketCapacity--;
-                this.Inventory.Remove(thing);
+                if (trinketCapacity > 0)
+                {
+                    Equiped.Add(thing);
+                    var temp = (Trinket)thing;
+                    attacks.Add(new HealAbility(temp));
+                    this.ChangeHealth(temp.DmgValue);
+                    trinketCapacity--;
+                    this.Inventory.Remove(thing);
+                }
             }
         }
 
