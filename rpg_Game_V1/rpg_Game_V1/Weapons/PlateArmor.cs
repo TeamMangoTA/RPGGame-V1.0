@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace rpg_Game_V1.Weapons
 {
-    class PlateArmor:Armor,IArmor
+    class PlateArmor : Armor, IArmor
     {
         public int DefRatingMod { get; set; }
 

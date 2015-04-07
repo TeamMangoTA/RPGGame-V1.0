@@ -35,7 +35,7 @@ namespace rpg_Game_V1.EntityModels
         {
             if(thing is Weapon)
             {
-                if(weaponCapacity>0)
+                if(weaponCapacity > 0)
                 {
                     Equiped.Add(thing);
                    
@@ -48,6 +48,25 @@ namespace rpg_Game_V1.EntityModels
                 //else { Console.WriteLine("Not Allowed"); }
             }
         }
+
+        public void UneqipWeapon(Items thing)
+        {
+            if(thing is Weapon)
+            {
+                Equiped.Remove(thing);
+                Inventory.Add(thing);
+
+                var temp = (Saber)thing;
+                LightAttackAbility tempAbility = new LightAttackAbility(temp);
+                var toRemove = attacks.FirstOrDefault(w => w == tempAbility);
+
+                attacks.Remove(toRemove);
+
+                weaponCapacity++;
+            }
+        }
+
+        
 
         public void EquipArmor(Items thing)
         {
@@ -63,6 +82,20 @@ namespace rpg_Game_V1.EntityModels
                 }
 
                 //else { Console.WriteLine("Not Allowed"); }
+            }
+        }
+
+        public void UneqipArmour(Items thing)
+        {
+            if (thing is Armor)
+            {
+                Equiped.Remove(thing);
+                Inventory.Add(thing);
+
+                var temp = (PlateArmor)thing;
+                this.ChangeDefence(- temp.DefRatingMod);
+
+                armorCapacity++;
             }
         }
 
@@ -87,17 +120,46 @@ namespace rpg_Game_V1.EntityModels
 
             return r;
         }
-        public string InventoryList()
+        public List<Items> InventoryList()
         {
-            StringBuilder result = new StringBuilder();
-            result.AppendLine("Inventory: ");
-            foreach (var item in Inventory)
+            List<Items> inventory = new List<Items>();
+            foreach(var item in Inventory)
             {
-                result.AppendLine(" - " + item.ToString());
+                inventory.Add(item);
             }
-
-            return result.ToString();
+            return inventory;
         }
+
+        public List<Weapon> GetWeaponsFromInventory()
+        {
+            List<Weapon> weapons = new List<Weapon>();
+            weapons = Inventory.FindAll(w => w is Weapon).Select(w => w as Weapon).ToList();
+            return weapons;
+
+        }
+
+        public List<Armor> GetArmourFromInventory()
+        {
+            List<Armor> armours = new List<Armor>();
+            armours = Inventory.FindAll(a => a is Armor).Select(a => a as Armor).ToList();
+            return armours;
+        }
+
+        public void PickWeaponToEquip(int index)
+        {
+            List<Weapon> weapons = GetWeaponsFromInventory();
+            this.EquipWeapon(weapons[index]);
+            this.Inventory.Remove(weapons[index]);
+        }
+
+        public void PickArmourToEqip(int index)
+        {
+            List<Armor> armours = GetArmourFromInventory();
+            this.EquipArmor(armours[index]);
+            this.Inventory.Remove(armours[index]);
+        }
+
+
 
         public string[] AbilityList()
         {
