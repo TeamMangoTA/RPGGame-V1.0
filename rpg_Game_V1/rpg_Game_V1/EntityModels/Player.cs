@@ -57,6 +57,24 @@ namespace rpg_Game_V1.EntityModels
 
             }
         }
+
+        public void UneqipWeapon(Items thing)
+        {
+            if (thing is Weapon)
+            {
+                Equiped.Remove(thing);
+                Inventory.Add(thing);
+
+                var temp = (Saber)thing;
+                LightAttackAbility tempAbility = new LightAttackAbility(temp);
+                var toRemove = attacks.FirstOrDefault(w => w == tempAbility);
+
+                attacks.Remove(toRemove);
+
+                weaponCapacity++;
+            }
+        }
+
         
 
         public void EquipArmor(Items thing)
@@ -75,6 +93,46 @@ namespace rpg_Game_V1.EntityModels
                 //else { Console.WriteLine("Not Allowed"); }
             }
         }
+
+        public void UneqipArmour(Items thing)
+        {
+            if (thing is Armor)
+            {
+                Equiped.Remove(thing);
+                Inventory.Add(thing);
+
+                var temp = (PlateArmor)thing;
+                this.ChangeDefence(-temp.DefRatingMod);
+
+                armorCapacity++;
+            }
+        }
+
+        public void EqipTrinket(Items thing)
+        {
+            if (thing is Trinket)
+            {
+                Equiped.Add(thing);
+                var temp = (Trinket)thing;
+                attacks.Add(new HealAbility(temp));
+                this.ChangeHealth(temp.DmgValue);
+            }
+        }
+
+        public void UneqipTrinket(Items thing)
+        {
+            Equiped.Remove(thing);
+            Inventory.Add(thing);
+
+            var temp = (Trinket)thing;
+            var tempAbility = new HealAbility(temp);
+            var toRemove = attacks.FirstOrDefault(w => w == tempAbility);
+
+            attacks.Remove(toRemove);
+
+        }
+
+
 
         public int DoAttack(Enemy target, int n)
         {
