@@ -85,7 +85,7 @@ namespace rpg_Game_V1.EntityModels
 
 
                 weaponCapacity++;
-                this.Inventory.Add(thing);
+                
             }
         }
 
@@ -151,7 +151,7 @@ namespace rpg_Game_V1.EntityModels
             
             attacks.Remove(toRemove);
             this.trinketCapacity++;
-            this.Inventory.Add(thing);
+            
 
         }
 
