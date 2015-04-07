@@ -137,7 +137,7 @@ namespace rpg_Game_V1.EntityModels
         public int DoAttack(Enemy target, int n)
         {
             var r = -1;
-            int ch = 0;
+            int ch = n;
             if (ch < 0) { return -1; }
             
             var tempattack = (Ability)attacks[ch];
@@ -157,6 +157,11 @@ namespace rpg_Game_V1.EntityModels
                     r = this.DoAttack(target, tempattack);
                 }
             }
+            else if (tempattack is HealAbility)
+            {
+                 r = this.DoAttack(target, tempattack);
+
+            }
              return r;
         }
         private int DoAttack(Enemy target, Ability a)
@@ -170,12 +175,20 @@ namespace rpg_Game_V1.EntityModels
                 var r=resolution.Resolve();
                 return r;
             }
-            else 
+            else if(a is LightMagicAbility) 
             {
                 var skill = (LightMagicAbility)a;
                 var action = skill.CreatAction(this, target);
                 var resolution = action;
                 var r=resolution.Resolve();
+                return r;
+            }
+            else
+            {
+                var skill = (HealAbility)a;
+                var action = skill.CreatAction(this);
+                var resolution = action;
+                var r = resolution.Resolve();
                 return r;
             }
             

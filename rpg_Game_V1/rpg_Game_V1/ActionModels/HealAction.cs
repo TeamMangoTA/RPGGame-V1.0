@@ -16,7 +16,7 @@ namespace rpg_Game_V1.ActionModels
         public int StaminaEffect { get; set; }
 
 
-        public HealAction(Enemy p1, Player p2, LightAttackAbility a1)
+        public HealAction(Player p1, Player p2, HealAbility a1)
             : base(p1, p2, a1)
         {
 

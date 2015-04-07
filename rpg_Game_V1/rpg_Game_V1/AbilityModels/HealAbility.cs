@@ -6,6 +6,8 @@
     using System.Text;
     using System.Threading.Tasks;
     using rpg_Game_V1.Weapons;
+    using rpg_Game_V1.ActionModels;
+    using rpg_Game_V1.EntityModels;
     
     public class HealAbility : AttackAbility
     {
@@ -29,6 +31,15 @@
             this.ManaEffect = 0;
             this.HitModf = int.MaxValue;
             this.Name = trinket.Name;
+        }
+
+        public HealAction CreatAction(Entity origin)
+        {
+            
+            var player = (Player)origin;
+
+            return new HealAction(player, player, this);
+           
         }
 
         public override string ToString()
