@@ -63,7 +63,7 @@ namespace rpg_Game_V1
             //Console.WriteLine(testPlayer);
             //
             //Console.ReadLine();
-
+            
             var test = new CombatScreen(testPlayer,testEnemy );
             test.ShowDialog();
 
