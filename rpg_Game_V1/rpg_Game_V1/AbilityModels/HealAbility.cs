@@ -5,10 +5,14 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
-
-    public abstract class HealAbility : Ability
+    using rpg_Game_V1.Weapons;
+    
+    public class HealAbility : AttackAbility
     {
-        public int staminaEffect { get; set; }
+        public int HealtDmg { get; set; }
+        public int StaminaEffect { get; set; }
+        public int ManaEffect { get; set; }
+        public int HitModf { get; set; }
 
         public override string AbilityType
         {
@@ -18,9 +22,18 @@
             }
         }
 
-       public HealAbility(int stamina)
+        public HealAbility(Trinket trinket)
         {
-            this.staminaEffect = stamina;
+            this.HealtDmg = trinket.DmgValue;
+            this.StaminaEffect = 0;
+            this.ManaEffect = 0;
+            this.HitModf = int.MaxValue;
+            this.Name = trinket.Name;
+        }
+
+        public override string ToString()
+        {
+            return this.Name + string.Format(" - Sc: {0}", this.HealtDmg);
         }
     }
 }
