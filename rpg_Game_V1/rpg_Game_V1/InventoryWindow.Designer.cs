@@ -88,6 +88,7 @@
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.217696F));
@@ -95,35 +96,39 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.98502F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.304775F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.52247F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1258, 507);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(944, 412);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // buttonEquipItem
             // 
             this.buttonEquipItem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonEquipItem.Location = new System.Drawing.Point(1007, 445);
+            this.buttonEquipItem.Location = new System.Drawing.Point(754, 360);
+            this.buttonEquipItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonEquipItem.Name = "buttonEquipItem";
-            this.buttonEquipItem.Size = new System.Drawing.Size(248, 59);
+            this.buttonEquipItem.Size = new System.Drawing.Size(188, 50);
             this.buttonEquipItem.TabIndex = 24;
             this.buttonEquipItem.Text = "Equip";
             this.buttonEquipItem.UseVisualStyleBackColor = true;
+            this.buttonEquipItem.Click += new System.EventHandler(this.buttonEquipItem_Click);
             // 
             // comboBoxEquip
             // 
             this.comboBoxEquip.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxEquip.FormattingEnabled = true;
-            this.comboBoxEquip.Location = new System.Drawing.Point(1007, 408);
+            this.comboBoxEquip.Location = new System.Drawing.Point(754, 330);
+            this.comboBoxEquip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxEquip.Name = "comboBoxEquip";
-            this.comboBoxEquip.Size = new System.Drawing.Size(248, 24);
+            this.comboBoxEquip.Size = new System.Drawing.Size(188, 21);
             this.comboBoxEquip.TabIndex = 19;
             // 
             // StatsTrinketLabel
             // 
             this.StatsTrinketLabel.AutoSize = true;
             this.StatsTrinketLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StatsTrinketLabel.Location = new System.Drawing.Point(756, 279);
+            this.StatsTrinketLabel.Location = new System.Drawing.Point(566, 226);
+            this.StatsTrinketLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StatsTrinketLabel.Name = "StatsTrinketLabel";
-            this.StatsTrinketLabel.Size = new System.Drawing.Size(245, 126);
+            this.StatsTrinketLabel.Size = new System.Drawing.Size(184, 102);
             this.StatsTrinketLabel.TabIndex = 13;
             this.StatsTrinketLabel.Text = "Trinket  stats";
             // 
@@ -131,9 +136,10 @@
             // 
             this.StatsArmorLabel.AutoSize = true;
             this.StatsArmorLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StatsArmorLabel.Location = new System.Drawing.Point(505, 279);
+            this.StatsArmorLabel.Location = new System.Drawing.Point(378, 226);
+            this.StatsArmorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StatsArmorLabel.Name = "StatsArmorLabel";
-            this.StatsArmorLabel.Size = new System.Drawing.Size(245, 126);
+            this.StatsArmorLabel.Size = new System.Drawing.Size(184, 102);
             this.StatsArmorLabel.TabIndex = 12;
             this.StatsArmorLabel.Text = "Armor  stats";
             // 
@@ -141,9 +147,10 @@
             // 
             this.StatsWeaponOneLabel.AutoSize = true;
             this.StatsWeaponOneLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StatsWeaponOneLabel.Location = new System.Drawing.Point(254, 279);
+            this.StatsWeaponOneLabel.Location = new System.Drawing.Point(190, 226);
+            this.StatsWeaponOneLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StatsWeaponOneLabel.Name = "StatsWeaponOneLabel";
-            this.StatsWeaponOneLabel.Size = new System.Drawing.Size(245, 126);
+            this.StatsWeaponOneLabel.Size = new System.Drawing.Size(184, 102);
             this.StatsWeaponOneLabel.TabIndex = 11;
             this.StatsWeaponOneLabel.Text = "Weapon 2  stats";
             // 
@@ -151,36 +158,40 @@
             // 
             this.StatsWeaponTwoLabel.AutoSize = true;
             this.StatsWeaponTwoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StatsWeaponTwoLabel.Location = new System.Drawing.Point(3, 279);
+            this.StatsWeaponTwoLabel.Location = new System.Drawing.Point(2, 226);
+            this.StatsWeaponTwoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StatsWeaponTwoLabel.Name = "StatsWeaponTwoLabel";
-            this.StatsWeaponTwoLabel.Size = new System.Drawing.Size(245, 126);
+            this.StatsWeaponTwoLabel.Size = new System.Drawing.Size(184, 102);
             this.StatsWeaponTwoLabel.TabIndex = 10;
             this.StatsWeaponTwoLabel.Text = "Weapon 1  stats";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox4.Location = new System.Drawing.Point(756, 29);
+            this.pictureBox4.Location = new System.Drawing.Point(566, 23);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(245, 247);
+            this.pictureBox4.Size = new System.Drawing.Size(184, 201);
             this.pictureBox4.TabIndex = 8;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Location = new System.Drawing.Point(505, 29);
+            this.pictureBox3.Location = new System.Drawing.Point(378, 23);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(245, 247);
+            this.pictureBox3.Size = new System.Drawing.Size(184, 201);
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Location = new System.Drawing.Point(254, 29);
+            this.pictureBox2.Location = new System.Drawing.Point(190, 23);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(245, 247);
+            this.pictureBox2.Size = new System.Drawing.Size(184, 201);
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
@@ -188,9 +199,10 @@
             // 
             this.InventoryLabel.AutoSize = true;
             this.InventoryLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.InventoryLabel.Location = new System.Drawing.Point(1007, 0);
+            this.InventoryLabel.Location = new System.Drawing.Point(754, 0);
+            this.InventoryLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.InventoryLabel.Name = "InventoryLabel";
-            this.InventoryLabel.Size = new System.Drawing.Size(248, 26);
+            this.InventoryLabel.Size = new System.Drawing.Size(188, 21);
             this.InventoryLabel.TabIndex = 4;
             this.InventoryLabel.Text = "Inventory";
             // 
@@ -198,9 +210,10 @@
             // 
             this.TrinketLabel.AutoSize = true;
             this.TrinketLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TrinketLabel.Location = new System.Drawing.Point(756, 0);
+            this.TrinketLabel.Location = new System.Drawing.Point(566, 0);
+            this.TrinketLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TrinketLabel.Name = "TrinketLabel";
-            this.TrinketLabel.Size = new System.Drawing.Size(245, 26);
+            this.TrinketLabel.Size = new System.Drawing.Size(184, 21);
             this.TrinketLabel.TabIndex = 3;
             this.TrinketLabel.Text = "Trinket";
             // 
@@ -208,9 +221,10 @@
             // 
             this.ArmorLabel.AutoSize = true;
             this.ArmorLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ArmorLabel.Location = new System.Drawing.Point(505, 0);
+            this.ArmorLabel.Location = new System.Drawing.Point(378, 0);
+            this.ArmorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ArmorLabel.Name = "ArmorLabel";
-            this.ArmorLabel.Size = new System.Drawing.Size(245, 26);
+            this.ArmorLabel.Size = new System.Drawing.Size(184, 21);
             this.ArmorLabel.TabIndex = 2;
             this.ArmorLabel.Text = "Armor";
             // 
@@ -218,9 +232,10 @@
             // 
             this.WeaponTwoLabel.AutoSize = true;
             this.WeaponTwoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WeaponTwoLabel.Location = new System.Drawing.Point(254, 0);
+            this.WeaponTwoLabel.Location = new System.Drawing.Point(190, 0);
+            this.WeaponTwoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponTwoLabel.Name = "WeaponTwoLabel";
-            this.WeaponTwoLabel.Size = new System.Drawing.Size(245, 26);
+            this.WeaponTwoLabel.Size = new System.Drawing.Size(184, 21);
             this.WeaponTwoLabel.TabIndex = 1;
             this.WeaponTwoLabel.Text = "Weapon 2";
             // 
@@ -228,18 +243,20 @@
             // 
             this.WeaponOneLabel.AutoSize = true;
             this.WeaponOneLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WeaponOneLabel.Location = new System.Drawing.Point(3, 0);
+            this.WeaponOneLabel.Location = new System.Drawing.Point(2, 0);
+            this.WeaponOneLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponOneLabel.Name = "WeaponOneLabel";
-            this.WeaponOneLabel.Size = new System.Drawing.Size(245, 26);
+            this.WeaponOneLabel.Size = new System.Drawing.Size(184, 21);
             this.WeaponOneLabel.TabIndex = 0;
             this.WeaponOneLabel.Text = "Weapon 1";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 23);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(245, 247);
+            this.pictureBox1.Size = new System.Drawing.Size(184, 201);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
@@ -247,19 +264,21 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.InventoryItems);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1007, 29);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(754, 23);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.tableLayoutPanel1.SetRowSpan(this.flowLayoutPanel1, 2);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(248, 373);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(188, 303);
             this.flowLayoutPanel1.TabIndex = 15;
             // 
             // InventoryItems
             // 
             this.InventoryItems.AutoSize = true;
             this.InventoryItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.InventoryItems.Location = new System.Drawing.Point(3, 0);
+            this.InventoryItems.Location = new System.Drawing.Point(2, 0);
+            this.InventoryItems.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.InventoryItems.Name = "InventoryItems";
-            this.InventoryItems.Size = new System.Drawing.Size(104, 17);
+            this.InventoryItems.Size = new System.Drawing.Size(78, 13);
             this.InventoryItems.TabIndex = 14;
             this.InventoryItems.Text = "Inventory irems";
             // 
@@ -268,19 +287,22 @@
             this.tableLayoutPanel1.SetColumnSpan(this.flowLayoutPanel3, 4);
             this.flowLayoutPanel3.Controls.Add(this.buttonUnequip);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 445);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(2, 360);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(998, 59);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(748, 50);
             this.flowLayoutPanel3.TabIndex = 26;
             // 
             // buttonUnequip
             // 
-            this.buttonUnequip.Location = new System.Drawing.Point(3, 3);
+            this.buttonUnequip.Location = new System.Drawing.Point(2, 2);
+            this.buttonUnequip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonUnequip.Name = "buttonUnequip";
-            this.buttonUnequip.Size = new System.Drawing.Size(524, 47);
+            this.buttonUnequip.Size = new System.Drawing.Size(393, 38);
             this.buttonUnequip.TabIndex = 0;
             this.buttonUnequip.Text = "Unequip";
             this.buttonUnequip.UseVisualStyleBackColor = true;
+            this.buttonUnequip.Click += new System.EventHandler(this.buttonUnequip_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -288,25 +310,28 @@
             this.flowLayoutPanel2.Controls.Add(this.comboBoxUnequip);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 408);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(2, 330);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(998, 31);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(748, 26);
             this.flowLayoutPanel2.TabIndex = 25;
             // 
             // comboBoxUnequip
             // 
             this.comboBoxUnequip.FormattingEnabled = true;
-            this.comboBoxUnequip.Location = new System.Drawing.Point(3, 4);
+            this.comboBoxUnequip.Location = new System.Drawing.Point(2, 3);
+            this.comboBoxUnequip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxUnequip.Name = "comboBoxUnequip";
-            this.comboBoxUnequip.Size = new System.Drawing.Size(524, 24);
+            this.comboBoxUnequip.Size = new System.Drawing.Size(394, 21);
             this.comboBoxUnequip.TabIndex = 0;
             // 
             // InventoryWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 507);
+            this.ClientSize = new System.Drawing.Size(944, 412);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "InventoryWindow";
             this.Text = "InventoryWindow";
             this.tableLayoutPanel1.ResumeLayout(false);

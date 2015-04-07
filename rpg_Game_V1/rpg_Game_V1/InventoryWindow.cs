@@ -47,6 +47,102 @@ namespace rpg_Game_V1
 
             return  output;
         }
+
+        private void buttonEquipItem_Click(object sender, EventArgs e)
+        {
+            var index = this.comboBoxEquip.SelectedIndex;
+            var item = this.Human.Inventory[index];
+
+            if(item is Weapon)
+            {
+                this.Human.EquipWeapon(item);
+            }
+            else if(item is Armor)
+            {
+                this.Human.EquipArmor(item);
+            }
+            else if (item is Trinket)
+            {
+                this.Human.EqipTrinket(item);
+            }
+
+            this.SetUpEquipment();
+            this.InventoryItems.Text = string.Join("\n", Human.Inventory);
+            this.comboBoxEquip.Items.Clear();
+            this.comboBoxEquip.Items.AddRange(this.ItemsNames());
+            this.Update();
+        }
+
+        private void SetUpEquipment()
+        {
+            this.comboBoxUnequip.Items.Clear();
+            List<string> equipment = new List<string>();
+            int count = 0;
+            foreach (var item in this.Human.Equiped)
+            {
+                if(item is Weapon)
+                {
+                 
+                    switch(count)
+                    {
+                        case 0:
+                            this.pictureBox1.Load(item.Image);
+                            this.WeaponOneLabel.Text=item.ToString();
+                            break;
+                        case 1:
+                            this.pictureBox2.Load(item.Image);
+                            this.WeaponTwoLabel.Text = item.ToString();
+                            break;
+                        default:
+                            break;
+                    }
+                    count++;
+                }
+                else if(item is Armor)
+                {
+               
+                    this.pictureBox3.Load(item.Image);
+                    this.StatsArmorLabel.Text = item.ToString();
+                }
+                else
+                {
+                    this.pictureBox4.Load(item.Image);
+                    this.StatsTrinketLabel.Text = item.ToString();
+                }
+
+                equipment.Add(item.ToString());
+            }
+
+            this.comboBoxUnequip.Items.AddRange(equipment.ToArray());
+
+
+        }
+
+        private void buttonUnequip_Click(object sender, EventArgs e)
+        {
+            var index = this.comboBoxUnequip.SelectedIndex;
+            var item = this.Human.Equiped[index];
+
+            if(item is Weapon)
+            {
+                this.Human.UneqipWeapon(item);
+            }
+            else if(item is Armor)
+            {
+                this.Human.UneqipArmour(item);
+            }
+            else
+            {
+                this.Human.UneqipTrinket(item);
+            }
+
+            this.InventoryItems.Text = string.Join("\n", Human.Inventory);
+            this.comboBoxEquip.Items.Clear();
+            this.comboBoxEquip.Items.AddRange(this.ItemsNames());
+            
+        }
+
+
     }
 }
 

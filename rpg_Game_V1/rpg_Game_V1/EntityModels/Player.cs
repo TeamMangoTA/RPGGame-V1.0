@@ -17,6 +17,7 @@ namespace rpg_Game_V1.EntityModels
         public List<Items> Equiped { get; set; }
         int weaponCapacity = 2;
         int armorCapacity = 1;
+        int trinketCapacity = 1;
 
         public Player(string name,int health,int mana, int stamina,
             int dexterity, int intelligence, int strenght, int defenceRation)
@@ -39,7 +40,7 @@ namespace rpg_Game_V1.EntityModels
             {
                 if(weaponCapacity>0)
                 {
-                    Equiped.Add(thing);
+                    this.Equiped.Add(thing);
                     if (thing is Saber)
                     {
                         var temp = (Saber)thing;
@@ -52,6 +53,7 @@ namespace rpg_Game_V1.EntityModels
                         attacks.Add(new LightMagicAbility(temp,this));
                     }
                     weaponCapacity--;
+                    this.Inventory.Remove(thing);
                 }
 
                 //else { Console.WriteLine("Not Allowed"); }
@@ -66,13 +68,24 @@ namespace rpg_Game_V1.EntityModels
                 Equiped.Remove(thing);
                 Inventory.Add(thing);
 
-                var temp = (Saber)thing;
-                LightAttackAbility tempAbility = new LightAttackAbility(temp);
-                var toRemove = attacks.FirstOrDefault(w => w == tempAbility);
+                if (thing is Saber)
+                {
+                    var temp = (Saber)thing;
+                    LightAttackAbility tempAbility = new LightAttackAbility(temp);
+                    var toRemove = attacks.FirstOrDefault(w => w == tempAbility);
+                }
 
-                attacks.Remove(toRemove);
+                else
+                {
+                    var temp=(DarkStaff)thing;
+                    LightMagicAbility tempAbility = new LightMagicAbility(temp);
+                    var toRemove = attacks.FirstOrDefault(w => w == tempAbility);
+                }
+                
+
 
                 weaponCapacity++;
+                this.Inventory.Add(thing);
             }
         }
 
@@ -91,7 +104,8 @@ namespace rpg_Game_V1.EntityModels
                     this.ChangeDefence(temp.DefRatingMod);
                 }
 
-                //else { Console.WriteLine("Not Allowed"); }
+                this.armorCapacity--;
+                this.Inventory.Remove(thing);
             }
         }
 
@@ -106,6 +120,7 @@ namespace rpg_Game_V1.EntityModels
                 this.ChangeDefence(-temp.DefRatingMod);
 
                 armorCapacity++;
+                this.Inventory.Add(thing);
             }
         }
 
@@ -117,6 +132,8 @@ namespace rpg_Game_V1.EntityModels
                 var temp = (Trinket)thing;
                 attacks.Add(new HealAbility(temp));
                 this.ChangeHealth(temp.DmgValue);
+                trinketCapacity--;
+                this.Inventory.Remove(thing);
             }
         }
 
@@ -128,8 +145,10 @@ namespace rpg_Game_V1.EntityModels
             var temp = (Trinket)thing;
             var tempAbility = new HealAbility(temp);
             var toRemove = attacks.FirstOrDefault(w => w == tempAbility);
-
+            
             attacks.Remove(toRemove);
+            this.trinketCapacity++;
+            this.Inventory.Add(thing);
 
         }
 
