@@ -90,6 +90,7 @@ namespace rpg_Game_V1
                 }
                 else if(item is Weapon)
                 {
+                    
                  
                     switch(count)
                     {
@@ -142,15 +143,23 @@ namespace rpg_Game_V1
             {
                 this.Human.UneqipWeapon(item);
 
-                if(item.ToString()==this.WeaponOneLabel.Text)
+                if (this.Human.weaponCapacity == 1)
                 {
-                    this.pictureBox1.Image = null;
-                    this.StatsWeaponOneLabel.Text = "";
+                    if (item.ToString() == this.WeaponOneLabel.Text)
+                    {
+                        this.pictureBox1.Image = null;
+                        this.StatsWeaponOneLabel.Text = "";
+                    }
+                    else
+                    {
+                        this.pictureBox2.Image = null;
+                        this.StatsWeaponTwooLabel.Text = "";
+                    }
                 }
                 else
                 {
-                    this.pictureBox2.Image = null;
-                    this.StatsWeaponTwooLabel.Text = "";
+                    this.pictureBox1.Image = null;
+                    this.StatsWeaponOneLabel.Text = "";
                 }
             }
 
@@ -159,7 +168,7 @@ namespace rpg_Game_V1
             this.comboBoxEquip.Items.AddRange(this.ItemsNames());
             this.SetUpEquipment();
 
-            this.comboBoxEquip.ResetText();
+            this.comboBoxUnequip.ResetText();
             this.Update();
         }
 

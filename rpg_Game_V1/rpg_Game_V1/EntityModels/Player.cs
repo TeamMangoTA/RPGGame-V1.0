@@ -15,9 +15,9 @@ namespace rpg_Game_V1.EntityModels
         // Make Inventory and Equiped public property !!!
         public List<Items> Inventory {get; set;}
         public List<Items> Equiped { get; set; }
-        int weaponCapacity = 2;
-        int armorCapacity = 1;
-        int trinketCapacity = 1;
+        public int weaponCapacity = 2;
+        public int armorCapacity = 1;
+        public int trinketCapacity = 1;
 
         public Player(string name,int health,int mana, int stamina,
             int dexterity, int intelligence, int strenght, int defenceRation)
