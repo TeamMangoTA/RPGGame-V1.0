@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace rpg_Game_V1.Weapons.Names
 {
-    public enum SaberNames
-    {       
-        Excalibur,
-        Valyrian,
-        Glamdring
+    public enum  TrinketsNames
+    {
+        ThePrecious,
+        DraupnirRing,        
     }
 }

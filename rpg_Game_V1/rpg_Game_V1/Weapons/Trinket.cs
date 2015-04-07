@@ -15,7 +15,8 @@ namespace rpg_Game_V1.Weapons
         public int AccuracyRating { get; set; }
         public int StaminaCost { get; set; }
 
-        public Trinket(string name, int dmg, int acc, int staminacost)
+        public Trinket(string name, int dmg, int acc, int staminacost, string imageLocation)
+            : base(imageLocation)
         {
             this.Name = name;
             this.DmgValue = dmg;

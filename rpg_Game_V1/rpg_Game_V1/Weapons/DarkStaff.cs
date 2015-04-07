@@ -12,7 +12,8 @@ namespace rpg_Game_V1.Weapons
         
         public int ManaCost { get; set; }
 
-        public DarkStaff(string name, int dmg, int acc,int manaCost)
+        public DarkStaff(string name, int dmg, int acc,int manaCost, string imageLocation)
+            : base(imageLocation)
         {
             this.Name = name;
             this.DmgValue = dmg;

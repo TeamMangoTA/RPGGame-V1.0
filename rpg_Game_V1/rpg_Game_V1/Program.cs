@@ -37,33 +37,43 @@ namespace rpg_Game_V1
             //var testEnemy=new Enemy("Billy",100,0,0,0,0,0,@"http://assets.sbnation.com/assets/795920/zergling-300.jpg",0);
             var testPlayer = new Player("Pavel", 100, 100, 5, 0, 0, 0,0);
             // AllocConsole();
-            var sword1 = new Saber("Doom", 0, 50, 1);
-            var sword2 = new Saber("Chaos", 25, -50, 2);
-            var staff1 = new DarkStaff("Boom", 90, 70, 40);
-            var staff2 = new DarkStaff("THis staff", 15, 40, 10);
-            var armor1 = new PlateArmor(15);
-            var ring = new Trinket("Ring", 30, 0, 0);
+            var sword1 = new Saber("Doom", 0, 50, 1, @"http://assets.sbnation.com/assets/795920/zergling-300.jpg");
+            var sword2 = new Saber("Chaos", 25, -50, 2, @"http://assets.sbnation.com/assets/795920/zergling-300.jpg");
+            var staff1 = new DarkStaff("Boom", 90, 70, 40, @"http://assets.sbnation.com/assets/795920/zergling-300.jpg");
+            var staff2 = new DarkStaff("THis staff", 15, 40, 10, @"http://assets.sbnation.com/assets/795920/zergling-300.jpg");
+            //var armor1 = new PlateArmor("GosoArmor", 15, @"http://assets.sbnation.com/assets/795920/zergling-300.jpg");
+            var item = ItemFactory.CreateRandomItem();
+            var ring = new Trinket("Ring", 30, 0, 0, @"http://assets.sbnation.com/assets/795920/zergling-300.jpg");
 
             //testPlayer.AddItem(sword1);
             //testPlayer.AddItem(sword2);
             //testPlayer.EquipWeapon(sword1);
-            //testPlayer.EquipWeapon(sword2);
-            testPlayer.AddItem(staff1);
-            testPlayer.AddItem(staff2);
-            testPlayer.EquipWeapon(staff1);
-            testPlayer.EquipWeapon(staff2);
-            testPlayer.EqipTrinket(ring);
+            ////testPlayer.EquipWeapon(sword2);
+            //testPlayer.AddItem(staff1);
+            //testPlayer.AddItem(staff2);
+            //testPlayer.AddItem(ring);
+            //testPlayer.EquipWeapon(staff1);
+            //testPlayer.EquipWeapon(staff2);
+            //testPlayer.EqipTrinket(ring);
+
+            for (int i = 0; i < 5; i++)
+            {
+                var itemRnd = ItemFactory.CreateRandomItem();
+                testPlayer.AddItem(itemRnd);
+                //testPlayer.equ
+            }
 
 
             testEnemy.AddAbility(new LightAttackAbility(sword1));
          
             
             //Console.WriteLine(testPlayer);            
-            testPlayer.EquipArmor(armor1);
+            //testPlayer.EquipArmor(armor1);
             //Console.WriteLine(testPlayer);
             //
             //Console.ReadLine();
-            
+            var testinv = new InventoryWindow(testPlayer);
+            testinv.ShowDialog();
             var test = new CombatScreen(testPlayer,testEnemy );
             test.ShowDialog();
 

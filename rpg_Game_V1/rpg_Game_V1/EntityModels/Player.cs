@@ -12,22 +12,23 @@ namespace rpg_Game_V1.EntityModels
     public class Player:GoodEntity
     {
          List<AttackAbility> attacks = new List<AttackAbility>();
-        List<Items> Inventory = new List<Items>();
-        List<Items> Equiped = new List<Items>();
+        // Make Inventory and Equiped public property !!!
+        public List<Items> Inventory {get; set;}
+        public List<Items> Equiped { get; set; }
         int weaponCapacity = 2;
         int armorCapacity = 1;
 
         public Player(string name,int health,int mana, int stamina,
             int dexterity, int intelligence, int strenght, int defenceRation)
             :base(name,health,mana,stamina,dexterity,intelligence,strenght,defenceRation)
-        {            
+        {         
+            this.Inventory  = new List<Items>();
+            this.Equiped = new List<Items>();
         }
 
         public void AddItem(Items thing)
         {
-            this.Inventory.Add(thing);
-            
-           
+            this.Inventory.Add(thing);    
 
             //attacks.Add(new LightAttackAbility(temp));
         }

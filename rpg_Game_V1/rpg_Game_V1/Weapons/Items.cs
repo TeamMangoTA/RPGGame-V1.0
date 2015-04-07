@@ -13,9 +13,17 @@ namespace rpg_Game_V1.Weapons
         //public abstract Ability AddAbility();
         public int EquipmentCost { get; set; }
 
+        public string Image { get; set; }
+
+        public Items(string imageLocation)
+        {
+            this.Image = imageLocation;
+        }
+
+
         public override string ToString()
         {
-            return this.Name + " - used slots: " + this.EquipmentCost;
+            return this.GetType().Name +  ":"  +Environment.NewLine + this.Name + " - used slots: " + this.EquipmentCost;
         }
     }   
 }

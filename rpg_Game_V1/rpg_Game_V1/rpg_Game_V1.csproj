@@ -67,6 +67,8 @@
     <Compile Include="EntityModels\Interfaces\IEntity.cs" />
     <Compile Include="EntityModels\Player.cs" />
     <Compile Include="Factories\EnemyType.cs" />
+    <Compile Include="Factories\ItemFactory.cs" />
+    <Compile Include="Factories\ItemTypes.cs" />
     <Compile Include="Factories\MobFactory.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -88,7 +90,10 @@
     <Compile Include="Weapons\Interface\IArmor.cs" />
     <Compile Include="Weapons\Interface\IWeapon.cs" />
     <Compile Include="Weapons\Items.cs" />
+    <Compile Include="Weapons\Names\DarkStaffNames.cs" />
+    <Compile Include="Weapons\Names\PlateArmorsNames.cs" />
     <Compile Include="Weapons\Names\SaberNames.cs" />
+    <Compile Include="Weapons\Names\TrinketsNames.cs" />
     <Compile Include="Weapons\PlateArmor.cs" />
     <Compile Include="Weapons\Saber.cs" />
     <Compile Include="Weapons\Trinket.cs" />

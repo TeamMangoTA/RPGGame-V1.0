@@ -10,6 +10,5 @@ namespace rpg_Game_V1.Weapons.Interface
     {
         int DmgValue { get; set; }
         int StaminaCost { get; set; }
-      
     }
 }

@@ -13,16 +13,15 @@ namespace rpg_Game_V1.Weapons
         
         public int StaminaCost { get; set; }
 
-        public Saber(string name, int dmg, int acc,int staminacost)
+        public Saber(string name, int dmg, int acc,int staminacost, string imageLocation)
+            : base(imageLocation)
         {
             this.Name = name;
             this.DmgValue = dmg;
             this.AccuracyRating = acc;
             this.StaminaCost = staminacost;
             this.EquipmentCost = 1;
-        }
-
-        
+        }        
 
         public override string ToString()
         {

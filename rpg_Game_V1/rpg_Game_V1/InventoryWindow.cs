@@ -13,6 +13,7 @@ using System.Windows.Forms;
 
 using rpg_Game_V1.EntityModels;
 using rpg_Game_V1.Weapons;
+
 namespace rpg_Game_V1
 {
     public partial class InventoryWindow : Form
@@ -29,7 +30,7 @@ namespace rpg_Game_V1
         {
             InitializeComponent();
             this.Human = player;
-            this.InventoryItems.Text = string.Join("\n", this.ItemsNames());
+            this.InventoryItems.Text = string.Join("\n", Human.Inventory );
             this.comboBoxEquip.Items.AddRange(this.ItemsNames());
         }
 
@@ -40,14 +41,12 @@ namespace rpg_Game_V1
 
         private string[] ItemsNames()
         {
-            var invet = this.Human.InventoryList();
+            var invet = this.Human.Inventory;
 
             var output = invet.Select(item => item.ToString()).ToArray();
 
-            return output;
-
+            return  output;
         }
-
-          }
+    }
 }
 
