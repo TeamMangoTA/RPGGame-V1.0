@@ -65,7 +65,7 @@ namespace rpg_Game_V1.ActionModels
             }
 
         }
-     
+
         public int Resolve()
         {
             this.Orgin.ChangeMana(-this.ManaEffect);

@@ -39,22 +39,14 @@ namespace rpg_Game_V1
             // AllocConsole();
             var sword1 = new Saber("Doom", 10, 50, 1);
             var sword2 = new Saber("Chaos", 25, -50, 2);
-            var staff1 = new DarkStaff("Boom", 90, 70, 40);
-            var staff2 = new DarkStaff("THis staff", 15, 40, 10);
             var armor1 = new PlateArmor(15);
 
-            //testPlayer.AddItem(sword1);
-            //testPlayer.AddItem(sword2);
-            //testPlayer.EquipWeapon(sword1);
-            //testPlayer.EquipWeapon(sword2);
-            testPlayer.AddItem(staff1);
-            testPlayer.AddItem(staff2);
-            testPlayer.EquipWeapon(staff1);
-            testPlayer.EquipWeapon(staff2);
-
+            testPlayer.AddItem(sword1);
+            testPlayer.AddItem(sword2);
+            testPlayer.EquipWeapon(sword1);
+            testPlayer.EquipWeapon(sword2);
 
             testEnemy.AddAbility(new LightAttackAbility(sword1));
-         
             
             //Console.WriteLine(testPlayer);            
             testPlayer.EquipArmor(armor1);

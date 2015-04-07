@@ -27,7 +27,6 @@ namespace rpg_Game_V1.EntityModels
         {
             attacks.Add(a);
         }
-        
 
         public int DoAttack(Player target, int n)
         {

@@ -13,7 +13,8 @@ namespace rpg_Game_V1.AbilityModels
     {
 
         public int HealtDmg { get; set; }
-        
+        public int StaminaEffect { get; set; }
+        public int ManaEffect { get; set; }
         public int HitModf { get; set; }
 
         public override string AbilityType
@@ -41,14 +42,7 @@ namespace rpg_Game_V1.AbilityModels
             this.HitModf = sword.AccuracyRating;
             this.Name = sword.Name + " Light Attack";
         }
-        public LightAttackAbility(Saber sword,Entity owner)
-        {
-            this.HealtDmg = sword.DmgValue + owner.Info.Str;
-            this.ManaEffect = 0;
-            this.StaminaEffect = sword.StaminaCost;
-            this.HitModf = sword.AccuracyRating;
-            this.Name = sword.Name + " Light Attack";
-        }
+
         public WeaponAttack CreatAction(Entity origin,Entity target)
         {
             if (origin is Player)

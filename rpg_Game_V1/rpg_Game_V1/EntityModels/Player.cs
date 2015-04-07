@@ -11,7 +11,7 @@ namespace rpg_Game_V1.EntityModels
 {
     public class Player:GoodEntity
     {
-         List<AttackAbility> attacks = new List<AttackAbility>();
+        List<AttackAbility> attacks = new List<AttackAbility>();
         List<Items> Inventory = new List<Items>();
         List<Items> Equiped = new List<Items>();
         int weaponCapacity = 2;
@@ -26,8 +26,7 @@ namespace rpg_Game_V1.EntityModels
         public void AddItem(Items thing)
         {
             this.Inventory.Add(thing);
-            
-           
+            var temp = (Saber)thing;
 
             //attacks.Add(new LightAttackAbility(temp));
         }
@@ -39,25 +38,16 @@ namespace rpg_Game_V1.EntityModels
                 if(weaponCapacity > 0)
                 {
                     Equiped.Add(thing);
-                    if (thing is Saber)
-                    {
-                        var temp = (Saber)thing;
+                   
+                    var temp = (Saber)thing;
 
-                        attacks.Add(new LightAttackAbility(temp,this));
-                    }
-                    else if(thing is DarkStaff)
-                    {
-                        var temp = (DarkStaff)thing;
-                        attacks.Add(new LightMagicAbility(temp,this));
-                    }
+                    attacks.Add(new LightAttackAbility(temp));
                     weaponCapacity--;
                 }
 
                 //else { Console.WriteLine("Not Allowed"); }
-
             }
         }
-        
 
         public void UneqipWeapon(Items thing)
         {
@@ -112,51 +102,23 @@ namespace rpg_Game_V1.EntityModels
         public int DoAttack(Enemy target, int n)
         {
             var r = -1;
-            int ch = 0;
+            int ch = n;
             if (ch < 0) { return -1; }
-            
-            var tempattack = (Ability)attacks[ch];
-            if (tempattack is LightAttackAbility)
+            var tempattack = (LightAttackAbility)attacks[ch];
+            if (this.Info.Stamina >= tempattack.StaminaEffect)
             {
-                if (this.Info.Stamina >= tempattack.StaminaEffect)
-                {
-
-                    r = this.DoAttack(target, tempattack);
-                }
-               
+                r = this.DoAttack(target, tempattack);
             }
-            else if ( tempattack is LightMagicAbility )
-            {
-                if(this.Info.Mana>=tempattack.ManaEffect)
-                {
-                    r = this.DoAttack(target, tempattack);
-                }
-            }
-             return r;
+            return r;
         }
         private int DoAttack(Enemy target, Ability a)
         {
+            var skill = (LightAttackAbility)a;
+            var action = skill.CreatAction(this, target);
+            var resolution = action;
+            var r=resolution.Resolve();
 
-            if(a is LightAttackAbility)
-            {
-                var skill = (LightAttackAbility)a;
-                var action = skill.CreatAction(this, target);
-                var resolution = action;
-                var r=resolution.Resolve();
-                return r;
-            }
-            else 
-            {
-                var skill = (LightMagicAbility)a;
-                var action = skill.CreatAction(this, target);
-                var resolution = action;
-                var r=resolution.Resolve();
-                return r;
-            }
-            
-            
-
-            
+            return r;
         }
         public List<Items> InventoryList()
         {
