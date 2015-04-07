@@ -19,7 +19,6 @@ The RPG game "" was developed as a team project for the C# OOP Course in [Teleri
 ##Game Description
 
 ###Menu
-The game’s menu contains four options:
 
 
 
@@ -32,6 +31,7 @@ The game’s menu contains four options:
 
 ###Screenshots
 
+![Screenshot](hhttps://github.com/TeamMangoTA/RPGGame-V1.0/tree/master/rpg_Game_V1/Media/Screens/screen1.jpg?raw=true)
 
 ##Programming Details
 
