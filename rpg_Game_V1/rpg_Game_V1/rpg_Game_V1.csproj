@@ -47,10 +47,13 @@
     <Compile Include="AbilityModels\Ability.cs" />
     <Compile Include="AbilityModels\AttackAbility.cs" />
     <Compile Include="AbilityModels\DeffAbility.cs" />
+    <Compile Include="AbilityModels\HealAbility.cs" />
     <Compile Include="AbilityModels\Interface\IAbility.cs" />
     <Compile Include="AbilityModels\LightAttackAbility.cs" />
     <Compile Include="AbilityModels\LightMagicAbility.cs" />
     <Compile Include="ActionModels\GameAction.cs" />
+    <Compile Include="ActionModels\HealAction.cs" />
+    <Compile Include="ActionModels\Interface\IHealer.cs" />
     <Compile Include="ActionModels\Interface\IOffensive.cs" />
     <Compile Include="ActionModels\MagicAttack.cs" />
     <Compile Include="ActionModels\OffensiveA.cs" />
@@ -82,6 +85,7 @@
     <Compile Include="Weapons\Names\SaberNames.cs" />
     <Compile Include="Weapons\PlateArmor.cs" />
     <Compile Include="Weapons\Saber.cs" />
+    <Compile Include="Weapons\Trinket.cs" />
     <Compile Include="Weapons\Weapon.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
