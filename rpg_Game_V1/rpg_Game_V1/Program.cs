@@ -56,13 +56,13 @@ namespace rpg_Game_V1
             //testPlayer.EquipWeapon(staff2);
             //testPlayer.EqipTrinket(ring);
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 7; i++)
             {
                 var itemRnd = ItemFactory.CreateRandomItem();
                 testPlayer.AddItem(itemRnd);
                 //testPlayer.equ
             }
-
+            testPlayer.AddItem(sword1);
 
             testEnemy.AddAbility(new LightAttackAbility(sword1));
          

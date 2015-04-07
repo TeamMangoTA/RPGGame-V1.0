@@ -13,14 +13,19 @@ namespace rpg_Game_V1.Factories
         private const string ImagePath = "../../../Media/Items/{0}.png";
 
         private static List<Items> ListOfItems = new List<Items>();
+        private static int GenerateTimesLimit = 0;
 
        
         private static Random Rnd = new Random();
 
         public static  Items CreateRandomItem()
         {
-            AddRandomItems(ListOfItems);
+            if (GenerateTimesLimit < 2)
+            {
+                AddRandomItems(ListOfItems);
+            }            
             int item = Rnd.Next(0, ListOfItems.Count);
+            //ListOfItems.Clear();
             return ListOfItems[item];
         }
 
@@ -33,7 +38,7 @@ namespace rpg_Game_V1.Factories
 
             // DARK STAFFS
             ListOfItems.Add(new DarkStaff(DarkStaffNames.Thyrsus.ToString(), Rnd.Next(10, 100), Rnd.Next(10, 100), Rnd.Next(1, 10), string.Format(ImagePath, DarkStaffNames.Thyrsus.ToString())));
-            ListOfItems.Add(new DarkStaff(DarkStaffNames.Thyrsus.ToString(), Rnd.Next(10, 100), Rnd.Next(10, 200), Rnd.Next(2, 20), string.Format(ImagePath, DarkStaffNames.Thyrsus.ToString())));
+            ListOfItems.Add(new DarkStaff(DarkStaffNames.Toyaga.ToString(), Rnd.Next(10, 100), Rnd.Next(10, 200), Rnd.Next(2, 20), string.Format(ImagePath, DarkStaffNames.Toyaga.ToString())));
 
             // TRINKETS
             ListOfItems.Add(new Trinket(TrinketsNames.DraupnirRing.ToString(), Rnd.Next(10, 100), Rnd.Next(0, 2), Rnd.Next(2, 20), string.Format(ImagePath, TrinketsNames.DraupnirRing.ToString())));

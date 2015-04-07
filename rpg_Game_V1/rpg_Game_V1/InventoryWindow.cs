@@ -53,7 +53,12 @@ namespace rpg_Game_V1
             var index = this.comboBoxEquip.SelectedIndex;
             var item = this.Human.Inventory[index];
 
-            if(item is Weapon)
+            // Trinket before weapon because trinkit is weapon itself and sets as weapon
+            if (item is Trinket)
+            {
+                this.Human.EqipTrinket(item);
+            }
+            else if(item is Weapon)
             {
                 this.Human.EquipWeapon(item);
             }
@@ -61,10 +66,7 @@ namespace rpg_Game_V1
             {
                 this.Human.EquipArmor(item);
             }
-            else if (item is Trinket)
-            {
-                this.Human.EqipTrinket(item);
-            }
+            
 
             this.SetUpEquipment();
             this.InventoryItems.Text = string.Join("\n", Human.Inventory);
@@ -87,11 +89,12 @@ namespace rpg_Game_V1
                     {
                         case 0:
                             this.pictureBox1.Load(item.Image);
-                            this.WeaponOneLabel.Text=item.ToString();
+                            // Labesls for Items stas starts with stats
+                            this.StatsWeaponOneLabel.Text=item.ToString();
                             break;
                         case 1:
                             this.pictureBox2.Load(item.Image);
-                            this.WeaponTwoLabel.Text = item.ToString();
+                            this.StatsWeaponTwooLabel.Text = item.ToString();
                             break;
                         default:
                             break;
