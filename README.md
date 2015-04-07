@@ -1,4 +1,4 @@
-![Team Mango](https://github.com/TeamMangoTA/RPGGame-V1.0)
+![Team Mango](http://puu.sh/h4Qa2/9267fcef08.gif)
 
 ##Introduction
 The RPG game "" was developed as a team project for the C# OOP Course in [Telerik Academy](http://telerikacademy.com/) by the “Mango” team.
@@ -16,7 +16,7 @@ The RPG game "" was developed as a team project for the C# OOP Course in [Teleri
 |VenelinPetkov      |venelingp      |
 
 
-##Game Description
+###Game Description
 
 ###Menu
 
@@ -25,19 +25,52 @@ The RPG game "" was developed as a team project for the C# OOP Course in [Teleri
 ###Gameplay
 
 
-###Controls
-
-
-
 ###Screenshots
 
-![Screenshot](hhttps://github.com/TeamMangoTA/RPGGame-V1.0/tree/master/rpg_Game_V1/Media/Screens/screen1.jpg?raw=true)
-
-##Programming Details
+![Screenshot](https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/Media/Screens/screen1.jpg?raw=true)
 
 
 
-###Object-Oriented Programming
+
+#Object-Oriented Programming
+
+##General Requirements Fulfilled:
+
+####Defined and implemented the following object-oriented assets our your project:
+
+ At least 5 interfaces (with one or more implementations)
+
+ At least 15 classes (implementing the application logic)
+
+ At least 3 abstract classes (with inheritors)
+
+ At least 1 custom exception class (with usage in your code)
+
+ At least 3 levels of depth in inheritance
+
+ At least 1 polymorphism usage
+
+ At least 1 structure
+
+ At least 1 enumeration
+
+ At least 1 event (with subscribers)
+
+ At least 1 design pattern (e.g. Composite, Singleton, Factory, Wrapper, Bridge, Command, etc.)
+
+##Optional Requirements:
+
+ Static members (fields, properties, constructor, etc.)
+
+ Constants, generic types, indexers, operators
+
+ Lambda expressions and LINQ
+
+ Implementation of IEnumerable<T>, ICloneable, ToString() override
+
+ Namespaces (if your classes are too much)
+
+ User interface (UI) – console, graphical, web or mobile
 
 ![Diagram](https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/ClassDiagram.png?raw=true)
 
