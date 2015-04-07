@@ -120,7 +120,7 @@ namespace rpg_Game_V1.EntityModels
                 this.ChangeDefence(-temp.DefRatingMod);
 
                 armorCapacity++;
-                this.Inventory.Add(thing);
+                
             }
         }
 
