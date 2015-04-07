@@ -18,6 +18,7 @@ namespace rpg_Game_V1
 {
     public partial class InventoryWindow : Form
     {
+        private const string EmptySlotPath = "../../../Media/Items/EmptySlot.png";
         public Player Human { get; set; }
 
         public InventoryWindow()
@@ -32,6 +33,10 @@ namespace rpg_Game_V1
             this.Human = player;
             this.InventoryItems.Text = string.Join("\n", Human.Inventory );
             this.comboBoxEquip.Items.AddRange(this.ItemsNames());
+            this.pictureBox1.Load(EmptySlotPath);
+            this.pictureBox2.Load(EmptySlotPath);
+            this.pictureBox3.Load(EmptySlotPath);
+            this.pictureBox4.Load(EmptySlotPath);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -129,14 +134,14 @@ namespace rpg_Game_V1
             if (item is Trinket)
             {
                 this.Human.UneqipTrinket(item);
-                this.pictureBox4.Image = null;
+                this.pictureBox4.Load(EmptySlotPath);
                 this.StatsTrinketLabel.Text = "";
                 
             }
             else if(item is Armor)
             {
                 this.Human.UneqipArmour(item);
-                this.pictureBox3.Image = null;
+                this.pictureBox3.Load(EmptySlotPath);
                 this.StatsArmorLabel.Text = "";
             }
             else
@@ -147,18 +152,18 @@ namespace rpg_Game_V1
                 {
                     if (item.ToString() == this.WeaponOneLabel.Text)
                     {
-                        this.pictureBox1.Image = null;
+                        this.pictureBox1.Load(EmptySlotPath);
                         this.StatsWeaponOneLabel.Text = "";
                     }
                     else
                     {
-                        this.pictureBox2.Image = null;
+                        this.pictureBox2.Load(EmptySlotPath);
                         this.StatsWeaponTwooLabel.Text = "";
                     }
                 }
                 else
                 {
-                    this.pictureBox1.Image = null;
+                    this.pictureBox1.Load(EmptySlotPath);
                     this.StatsWeaponOneLabel.Text = "";
                 }
             }
