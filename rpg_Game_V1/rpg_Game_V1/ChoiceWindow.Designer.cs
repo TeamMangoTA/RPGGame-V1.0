@@ -53,8 +53,9 @@
             this.buttonContinue.Name = "buttonContinue";
             this.buttonContinue.Size = new System.Drawing.Size(820, 165);
             this.buttonContinue.TabIndex = 0;
-            this.buttonContinue.Text = "CONTINUE FORWAR";
+            this.buttonContinue.Text = "CONTINUE FORWARD";
             this.buttonContinue.UseVisualStyleBackColor = true;
+            this.buttonContinue.Click += new System.EventHandler(this.buttonContinue_Click);
             // 
             // tableLayoutPanel1
             // 

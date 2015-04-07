@@ -13,7 +13,6 @@ namespace rpg_Game_V1
 
         public InventoryWindow inventoryScreen { get; set; }
         public CombatScreen battleScreen { get; set; }
-        //public ChoiceWindow choiceWindow { get; set; }
         public Player player { get; set; }
         public Enemy enemy { get; set; }
         public MobFactory mFactory { get; set; }
@@ -27,18 +26,13 @@ namespace rpg_Game_V1
             for (int i = 0; i < 7; i++)
             {
                 var itemRnd = ItemFactory.CreateRandomItem();
-                player.AddItem(itemRnd);
-                //testPlayer.equ
+                player.AddItem(itemRnd);                
             }
 
-           // choiceWindow = new ChoiceWindow();
-
             inventoryScreen = new InventoryWindow(player);
-            //inventoryScreen.ShowDialog();
+           //inventoryScreen.ShowDialog();
             battleScreen = new CombatScreen(player, enemy);
-            //battleScreen.ShowDialog();
+          // battleScreen.ShowDialog();
         }
-
-        public Enemy EnemyFactory { get; set; }
     }
 }

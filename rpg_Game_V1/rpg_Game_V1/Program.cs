@@ -31,18 +31,25 @@ namespace rpg_Game_V1
             Application.SetCompatibleTextRenderingDefault(false);
 
 
+            // UNCOMENT here ==========================>
             var Battle = new BattlePath();
-
             var choiceWindow = new ChoiceWindow(Battle);
             choiceWindow.ShowDialog();
 
-            //Application.Run(new Form2());
+
+
+
+            //===============================================>
+            // COMMENT ALL FROM HERE
+            ////Application.Run(new Form2());
+
+
             //var factory = MobFactory.Instance;
 
 
             //var testEnemy = factory.CreateEnemy();
             ////var testEnemy=new Enemy("Billy",100,0,0,0,0,0,@"http://assets.sbnation.com/assets/795920/zergling-300.jpg",0);
-            //var testPlayer = new Player("Pavel", 100, 100, 5, 0, 0, 0,0);
+            //var testPlayer = new Player("Pavel", 100, 100, 5, 0, 0, 0, 0);
             //// AllocConsole();
             //var sword1 = new Saber("Doom", 0, 50, 1, @"http://assets.sbnation.com/assets/795920/zergling-300.jpg");
             //var sword2 = new Saber("Chaos", 25, -50, 2, @"http://assets.sbnation.com/assets/795920/zergling-300.jpg");
@@ -72,8 +79,8 @@ namespace rpg_Game_V1
             //testPlayer.AddItem(sword1);
 
             //testEnemy.AddAbility(new LightAttackAbility(sword1));
-         
-            
+
+
             ////Console.WriteLine(testPlayer);            
             ////testPlayer.EquipArmor(armor1);
             ////Console.WriteLine(testPlayer);
@@ -81,9 +88,8 @@ namespace rpg_Game_V1
             ////Console.ReadLine();
             //var inventoryScreen = new InventoryWindow(testPlayer);
             //inventoryScreen.ShowDialog();
-            //var battleScreen = new CombatScreen(testPlayer,testEnemy );
+            //var battleScreen = new CombatScreen(testPlayer, testEnemy);
             //battleScreen.ShowDialog();
-
         }
     }
 }

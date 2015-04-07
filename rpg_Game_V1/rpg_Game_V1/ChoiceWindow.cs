@@ -12,12 +12,11 @@ namespace rpg_Game_V1
 {
     public partial class ChoiceWindow : Form
     {
-        public BattlePath battlePath { get; set; }
+        public BattlePath battlePath;
 
         public ChoiceWindow()
         {
             InitializeComponent();
-           
         }
 
         public ChoiceWindow(BattlePath bp)
@@ -34,6 +33,11 @@ namespace rpg_Game_V1
         private void buttonReset_Click(object sender, EventArgs e)
         {
             Program.Main();
+        }
+
+        private void buttonContinue_Click(object sender, EventArgs e)
+        {
+            battlePath.battleScreen.ShowDialog();
         }
     }
 }
