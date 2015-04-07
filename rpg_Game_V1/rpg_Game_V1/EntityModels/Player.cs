@@ -102,10 +102,8 @@ namespace rpg_Game_V1.EntityModels
                     armorCapacity--;
                     var temp = (PlateArmor)thing;
                     this.ChangeDefence(temp.DefRatingMod);
+                    this.Inventory.Remove(thing);
                 }
-
-                
-                this.Inventory.Remove(thing);
             }
         }
 
