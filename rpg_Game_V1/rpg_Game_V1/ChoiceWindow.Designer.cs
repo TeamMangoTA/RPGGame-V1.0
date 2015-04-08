@@ -28,22 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelPlayerStats = new System.Windows.Forms.Label();
             this.buttonContinue = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonReset = new System.Windows.Forms.Button();
             this.buttonInventory = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonRefreshStats = new System.Windows.Forms.Button();
+            this.labelStatsPlayer = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // labelPlayerStats
-            // 
-            this.labelPlayerStats.AutoSize = true;
-            this.labelPlayerStats.Location = new System.Drawing.Point(3, 0);
-            this.labelPlayerStats.Name = "labelPlayerStats";
-            this.labelPlayerStats.Size = new System.Drawing.Size(38, 17);
-            this.labelPlayerStats.TabIndex = 2;
-            this.labelPlayerStats.Text = "stats";
             // 
             // buttonContinue
             // 
@@ -63,8 +57,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.buttonReset, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.buttonContinue, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.labelPlayerStats, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.buttonInventory, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -101,6 +95,35 @@
             this.buttonInventory.UseVisualStyleBackColor = true;
             this.buttonInventory.Click += new System.EventHandler(this.buttonInventory_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.buttonRefreshStats);
+            this.flowLayoutPanel1.Controls.Add(this.labelStatsPlayer);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(820, 49);
+            this.flowLayoutPanel1.TabIndex = 5;
+            // 
+            // buttonRefreshStats
+            // 
+            this.buttonRefreshStats.Location = new System.Drawing.Point(3, 3);
+            this.buttonRefreshStats.Name = "buttonRefreshStats";
+            this.buttonRefreshStats.Size = new System.Drawing.Size(127, 46);
+            this.buttonRefreshStats.TabIndex = 0;
+            this.buttonRefreshStats.Text = "Refresh stats";
+            this.buttonRefreshStats.UseVisualStyleBackColor = true;
+            this.buttonRefreshStats.Click += new System.EventHandler(this.buttonRefreshStats_Click);
+            // 
+            // labelStatsPlayer
+            // 
+            this.labelStatsPlayer.AutoSize = true;
+            this.labelStatsPlayer.Location = new System.Drawing.Point(136, 0);
+            this.labelStatsPlayer.Name = "labelStatsPlayer";
+            this.labelStatsPlayer.Size = new System.Drawing.Size(46, 17);
+            this.labelStatsPlayer.TabIndex = 1;
+            this.labelStatsPlayer.Text = "label1";
+            // 
             // ChoiceWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -110,18 +133,21 @@
             this.Name = "ChoiceWindow";
             this.Text = "ChoiceWindow";
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label labelPlayerStats;
         private System.Windows.Forms.Button buttonContinue;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Button buttonInventory;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button buttonRefreshStats;
+        private System.Windows.Forms.Label labelStatsPlayer;
 
     }
 }

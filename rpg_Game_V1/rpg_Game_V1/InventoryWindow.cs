@@ -8,11 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
-
 using rpg_Game_V1.EntityModels;
 using rpg_Game_V1.Weapons;
+using rpg_Game_V1.Common;
 
 namespace rpg_Game_V1
 {
@@ -57,6 +55,12 @@ namespace rpg_Game_V1
         private void buttonEquipItem_Click(object sender, EventArgs e)
         {
             var index = this.comboBoxEquip.SelectedIndex;
+
+            if (index > this.Human.Inventory.Count - 1 || index < 0)
+            {
+                throw new RPGGameOutOfRangeSelection("Index out of range", 0, this.Human.Inventory.Count - 1);
+            }
+
             var item = this.Human.Inventory[index];
 
             // Trinket before weapon because trinkit is weapon itself and sets as weapon
@@ -130,6 +134,12 @@ namespace rpg_Game_V1
         private void buttonUnequip_Click(object sender, EventArgs e)
         {
             var index = this.comboBoxUnequip.SelectedIndex;
+
+            if (index > this.Human.Inventory.Count - 1 || index < 0)
+            {
+                throw new RPGGameOutOfRangeSelection("Index out of range", 0, this.Human.Inventory.Count - 1);
+            }
+
             var item = this.Human.Equiped[index];
 
             if (item is Trinket)

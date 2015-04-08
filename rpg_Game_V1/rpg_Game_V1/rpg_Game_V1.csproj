@@ -65,6 +65,7 @@
     <Compile Include="ChoiceWindow.Designer.cs">
       <DependentUpon>ChoiceWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\RPGGameOutOfRangeSelection.cs" />
     <Compile Include="Engine\CoreEngine.cs" />
     <Compile Include="EntityModels\BadEntity.cs" />
     <Compile Include="EntityModels\Enemy.cs" />
@@ -88,6 +89,12 @@
     </Compile>
     <Compile Include="InventoryWindow.Designer.cs">
       <DependentUpon>InventoryWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LooseWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LooseWindow.Designer.cs">
+      <DependentUpon>LooseWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryWindow.resx">
       <DependentUpon>InventoryWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LooseWindow.resx">
+      <DependentUpon>LooseWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
