@@ -79,5 +79,10 @@ namespace rpg_Game_V1
         {
             this.labelStatsPlayer.Text = ScreenStats();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            this.battlePath.player.Name = this.textBox1.Text;
+        }
     }
 }
