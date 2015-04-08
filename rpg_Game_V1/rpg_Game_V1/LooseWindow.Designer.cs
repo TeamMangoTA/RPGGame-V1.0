@@ -31,15 +31,16 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonRestart = new System.Windows.Forms.Button();
-            this.pictureBoxLooser = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBoxLooser = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLooser)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLooser)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Gray;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -57,34 +58,37 @@
             // 
             // buttonExit
             // 
+            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonExit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonExit.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.buttonExit.FlatAppearance.BorderSize = 4;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Font = new System.Drawing.Font("MetalShred", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.ForeColor = System.Drawing.Color.Red;
             this.buttonExit.Location = new System.Drawing.Point(464, 391);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(455, 57);
             this.buttonExit.TabIndex = 2;
             this.buttonExit.Text = "EXIT AS LOOSER";
-            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonRestart
             // 
+            this.buttonRestart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonRestart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonRestart.FlatAppearance.BorderColor = System.Drawing.Color.GreenYellow;
+            this.buttonRestart.FlatAppearance.BorderSize = 4;
+            this.buttonRestart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRestart.Font = new System.Drawing.Font("MetalShred", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRestart.ForeColor = System.Drawing.Color.GreenYellow;
             this.buttonRestart.Location = new System.Drawing.Point(3, 391);
             this.buttonRestart.Name = "buttonRestart";
             this.buttonRestart.Size = new System.Drawing.Size(455, 57);
             this.buttonRestart.TabIndex = 1;
             this.buttonRestart.Text = "TRY AGAIN";
-            this.buttonRestart.UseVisualStyleBackColor = true;
+            this.buttonRestart.UseVisualStyleBackColor = false;
             this.buttonRestart.Click += new System.EventHandler(this.buttonRestart_Click);
-            // 
-            // pictureBoxLooser
-            // 
-            this.pictureBoxLooser.Location = new System.Drawing.Point(3, 3);
-            this.pictureBoxLooser.Name = "pictureBoxLooser";
-            this.pictureBoxLooser.Size = new System.Drawing.Size(913, 379);
-            this.pictureBoxLooser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLooser.TabIndex = 0;
-            this.pictureBoxLooser.TabStop = false;
             // 
             // flowLayoutPanel1
             // 
@@ -96,6 +100,15 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(916, 382);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
+            // pictureBoxLooser
+            // 
+            this.pictureBoxLooser.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxLooser.Name = "pictureBoxLooser";
+            this.pictureBoxLooser.Size = new System.Drawing.Size(913, 379);
+            this.pictureBoxLooser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLooser.TabIndex = 0;
+            this.pictureBoxLooser.TabStop = false;
+            // 
             // LooseWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -105,8 +118,8 @@
             this.Name = "LooseWindow";
             this.Text = "LooseWindow";
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLooser)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLooser)).EndInit();
             this.ResumeLayout(false);
 
         }
