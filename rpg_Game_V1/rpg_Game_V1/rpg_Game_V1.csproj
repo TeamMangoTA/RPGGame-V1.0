@@ -65,7 +65,6 @@
     <Compile Include="ChoiceWindow.Designer.cs">
       <DependentUpon>ChoiceWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Enaemy.cs" />
     <Compile Include="Engine\CoreEngine.cs" />
     <Compile Include="EntityModels\BadEntity.cs" />
     <Compile Include="EntityModels\Enemy.cs" />
