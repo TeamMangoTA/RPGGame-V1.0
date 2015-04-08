@@ -81,6 +81,11 @@ namespace rpg_Game_V1
             this.label2.Text = this.Mob.ToString();
             this.Update();
 
+            if(this.HumanPlayer.Info.Health<=0||this.Mob.Info.Health<=0)
+            {
+                this.Close();
+            }
+
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
