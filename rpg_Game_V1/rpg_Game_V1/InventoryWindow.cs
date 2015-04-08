@@ -37,6 +37,7 @@ namespace rpg_Game_V1
             this.pictureBox2.Load(EmptySlotPath);
             this.pictureBox3.Load(EmptySlotPath);
             this.pictureBox4.Load(EmptySlotPath);
+            this.SetUpEquipment();
         }
 
         private void label1_Click(object sender, EventArgs e)
