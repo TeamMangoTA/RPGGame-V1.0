@@ -3,7 +3,7 @@
     using AbilityModels;
     using Weapons.Interface;
 
-    class PlateArmor : Armor, IArmor
+    class PlateArmor : Armor, IArmor,IItem
     {     
         public PlateArmor(string name, int def, string imageLocation)
             : base(imageLocation)

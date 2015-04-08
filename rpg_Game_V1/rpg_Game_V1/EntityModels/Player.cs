@@ -7,6 +7,7 @@
     using AbilityModels;
     using ActionModels;
     using Weapons;
+    using rpg_Game_V1.Weapons.Interface;
 
     public class Player:GoodEntity
     {
@@ -20,12 +21,12 @@
             int dexterity, int intelligence, int strenght, int defenceRation)
             :base(name,health,mana,stamina,dexterity,intelligence,strenght,defenceRation)
         {         
-            this.Inventory  = new List<Items>();
-            this.Equiped = new List<Items>();
+            this.Inventory  = new List<IItem>();
+            this.Equiped = new List<IItem>();
         }
 
-        public List<Items> Inventory { get; set; }
-        public List<Items> Equiped { get; set; }
+        public List<IItem> Inventory { get; set; }
+        public List<IItem> Equiped { get; set; }
 
         public void AddItem(Items thing)
         {
@@ -34,7 +35,7 @@
             //attacks.Add(new LightAttackAbility(temp));
         }
 
-        public void EquipWeapon(Items thing)
+        public void EquipWeapon(IItem thing)
         {
             if(thing is Weapon)
             {
@@ -61,7 +62,7 @@
             }
         }
 
-        public void UneqipWeapon(Items thing)
+        public void UneqipWeapon(IItem thing)
         {
             if (thing is Weapon)
             {
@@ -87,7 +88,7 @@
             }
         }
 
-        public void EquipArmor(Items thing)
+        public void EquipArmor(IItem thing)
         {
             if (thing is PlateArmor)
             {
@@ -103,7 +104,7 @@
             }
         }
 
-        public void UneqipArmour(Items thing)
+        public void UneqipArmour(IItem thing)
         {
             if (thing is Armor)
             {
@@ -117,7 +118,7 @@
             }
         }
 
-        public void EqipTrinket(Items thing)
+        public void EqipTrinket(IItem thing)
         {
             if (thing is Trinket)
             {
@@ -132,7 +133,7 @@
             }
         }
 
-        public void UneqipTrinket(Items thing)
+        public void UneqipTrinket(IItem thing)
         {
             Equiped.Remove(thing);
             Inventory.Add(thing);

@@ -45,6 +45,9 @@
             // 
             this.buttonContinue.BackColor = System.Drawing.Color.DimGray;
             this.buttonContinue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonContinue.FlatAppearance.BorderColor = System.Drawing.Color.GreenYellow;
+            this.buttonContinue.FlatAppearance.BorderSize = 4;
+            this.buttonContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonContinue.Font = new System.Drawing.Font("MetalShred", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonContinue.ForeColor = System.Drawing.Color.GreenYellow;
             this.buttonContinue.Location = new System.Drawing.Point(3, 57);
@@ -81,6 +84,9 @@
             // 
             this.buttonReset.BackColor = System.Drawing.Color.GreenYellow;
             this.buttonReset.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonReset.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.buttonReset.FlatAppearance.BorderSize = 4;
+            this.buttonReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonReset.Font = new System.Drawing.Font("MetalShred", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonReset.ForeColor = System.Drawing.Color.DimGray;
             this.buttonReset.Location = new System.Drawing.Point(3, 399);
@@ -96,6 +102,9 @@
             // 
             this.buttonInventory.BackColor = System.Drawing.Color.DimGray;
             this.buttonInventory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonInventory.FlatAppearance.BorderColor = System.Drawing.Color.GreenYellow;
+            this.buttonInventory.FlatAppearance.BorderSize = 4;
+            this.buttonInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonInventory.Font = new System.Drawing.Font("MetalShred", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInventory.ForeColor = System.Drawing.Color.GreenYellow;
             this.buttonInventory.Location = new System.Drawing.Point(3, 228);
@@ -154,12 +163,16 @@
             // 
             // buttonRefreshStats
             // 
-            this.buttonRefreshStats.BackColor = System.Drawing.Color.AliceBlue;
-            this.buttonRefreshStats.Font = new System.Drawing.Font("Lucida Console", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRefreshStats.BackColor = System.Drawing.Color.Gray;
+            this.buttonRefreshStats.FlatAppearance.BorderColor = System.Drawing.Color.GreenYellow;
+            this.buttonRefreshStats.FlatAppearance.BorderSize = 2;
+            this.buttonRefreshStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefreshStats.Font = new System.Drawing.Font("Lucida Console", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRefreshStats.ForeColor = System.Drawing.Color.GreenYellow;
             this.buttonRefreshStats.Location = new System.Drawing.Point(292, 2);
             this.buttonRefreshStats.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonRefreshStats.Name = "buttonRefreshStats";
-            this.buttonRefreshStats.Size = new System.Drawing.Size(76, 48);
+            this.buttonRefreshStats.Size = new System.Drawing.Size(90, 48);
             this.buttonRefreshStats.TabIndex = 0;
             this.buttonRefreshStats.Text = "Refresh stats";
             this.buttonRefreshStats.UseVisualStyleBackColor = false;

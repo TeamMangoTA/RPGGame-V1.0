@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="rpg_Game_V1.AbilityModels.Ability" Collapsed="true">
-    <Position X="3.75" Y="4.5" Width="1.5" />
+    <Position X="2.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAUAAAAAgAAAAAAAAAAAABA=</HashCode>
       <FileName>AbilityModels\Ability.cs</FileName>
@@ -14,20 +14,13 @@
       <FileName>AbilityModels\AttackAbility.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="rpg_Game_V1.AbilityModels.DeffAbility" Collapsed="true">
-    <Position X="7.25" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAIAAAAAAAAAAAgAAAAABA=</HashCode>
-      <FileName>AbilityModels\DeffAbility.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
   <Class Name="rpg_Game_V1.AbilityModels.HealAbility" Collapsed="true">
     <Position X="0.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAQAEAAAAAAEIAAAAgAAAAAAgAAAAABA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAQAEAAAAAAAIAAAAAAAAAAAgAAAAABA=</HashCode>
       <FileName>AbilityModels\HealAbility.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.AbilityModels.LightAttackAbility" Collapsed="true">
     <Position X="2.75" Y="7.25" Width="1.5" />
@@ -35,6 +28,7 @@
       <HashCode>AAAAAAAAAAAAAQAEAAAAAAAIAAAAAAAAAAAgAAAAABA=</HashCode>
       <FileName>AbilityModels\LightAttackAbility.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.AbilityModels.LightMagicAbility" Collapsed="true">
     <Position X="5" Y="7.25" Width="1.5" />
@@ -42,6 +36,7 @@
       <HashCode>AAAAAAAAAAAAAQAEAAAAAAAIAAAAAAAAAAAgAAAAABA=</HashCode>
       <FileName>AbilityModels\LightMagicAbility.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.ActionModels.GameAction" Collapsed="true">
     <Position X="2.75" Y="8.5" Width="1.5" />
@@ -82,7 +77,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.Common.RPGGameOutOfRangeSelection" Collapsed="true">
-    <Position X="14.75" Y="2.5" Width="1.5" />
+    <Position X="16.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\RPGGameOutOfRangeSelection.cs</FileName>
@@ -96,7 +91,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="rpg_Game_V1.EntityModels.BadEntity" Collapsed="true">
-    <Position X="8.25" Y="8.75" Width="1.5" />
+    <Position X="8.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>EntityModels\BadEntity.cs</FileName>
@@ -104,7 +99,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.EntityModels.Enemy" Collapsed="true">
-    <Position X="8.25" Y="10.25" Width="1.5" />
+    <Position X="8.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAEAAAAAAAAAAEAAAAAAAAAAAAAABAAAAAAQAAgAAA=</HashCode>
       <FileName>EntityModels\Enemy.cs</FileName>
@@ -112,7 +107,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.EntityModels.Entity" Collapsed="true">
-    <Position X="9.5" Y="7.5" Width="1.5" />
+    <Position X="9.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAAAEAAAAAAQgAAAAAAAAIIAAAEAAAAA=</HashCode>
       <FileName>EntityModels\Entity.cs</FileName>
@@ -120,7 +115,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.EntityModels.GoodEntity" Collapsed="true">
-    <Position X="10.5" Y="8.75" Width="1.5" />
+    <Position X="10.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>EntityModels\GoodEntity.cs</FileName>
@@ -128,7 +123,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.EntityModels.Player" Collapsed="true">
-    <Position X="10.5" Y="10.25" Width="1.5" />
+    <Position X="10.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BgEAABAQAAAAAAEEAAQABAAAgQAQBAAAAAAAAgAABAE=</HashCode>
       <FileName>EntityModels\Player.cs</FileName>
@@ -149,62 +144,67 @@
     </TypeIdentifier>
   </Class>
   <Class Name="rpg_Game_V1.Render.Renderer" Collapsed="true">
-    <Position X="13" Y="2.5" Width="1.5" />
+    <Position X="14.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Render\Renderer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="rpg_Game_V1.Weapons.Armor" Collapsed="true">
-    <Position X="0.5" Y="1.75" Width="1.5" />
+    <Position X="7.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Weapons\Armor.cs</FileName>
+      <FileName>Items\Armor.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.Weapons.DarkStaff" Collapsed="true">
-    <Position X="2.75" Y="3.25" Width="1.5" />
+    <Position X="0.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
-      <FileName>Weapons\DarkStaff.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAQAAA=</HashCode>
+      <FileName>Items\DarkStaff.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.Weapons.Items" Collapsed="true">
     <Position X="3.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAQQAAAAABAAAAAAAAAAAAA=</HashCode>
-      <FileName>Weapons\Items.cs</FileName>
+      <FileName>Items\Items.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.Weapons.PlateArmor" Collapsed="true">
-    <Position X="0.5" Y="3.25" Width="1.5" />
+    <Position X="7.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
-      <FileName>Weapons\PlateArmor.cs</FileName>
+      <FileName>Items\PlateArmor.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.Weapons.Saber" Collapsed="true">
-    <Position X="5" Y="3.25" Width="1.5" />
+    <Position X="2.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
-      <FileName>Weapons\Saber.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAQAAA=</HashCode>
+      <FileName>Items\Saber.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.Weapons.Trinket" Collapsed="true">
-    <Position X="7.25" Y="3.25" Width="1.5" />
+    <Position X="5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAACAAAAAAAAAAAAAQQAAA=</HashCode>
-      <FileName>Weapons\Trinket.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Items\Trinket.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.Weapons.Weapon" Collapsed="true">
-    <Position X="5" Y="1.75" Width="1.5" />
+    <Position X="2.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAQAAAA=</HashCode>
-      <FileName>Weapons\Weapon.cs</FileName>
+      <FileName>Items\Weapon.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.BattlePath" Collapsed="true">
     <Position X="13" Y="0.5" Width="1.5" />
@@ -241,6 +241,13 @@
       <FileName>LooseWindow.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="rpg_Game_V1.Program" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Struct Name="rpg_Game_V1.EntityModels.EntityStats" Collapsed="true">
     <Position X="13" Y="3.75" Width="1.5" />
     <TypeIdentifier>
@@ -248,7 +255,7 @@
       <FileName>EntityModels\EntityStats.cs</FileName>
     </TypeIdentifier>
   </Struct>
-  <Interface Name="rpg_Game_V1.AbilityModels.Interface.IAbility" Collapsed="true">
+  <Interface Name="rpg_Game_V1.AbilityModels.Interface.IAbility&lt;T&gt;" Collapsed="true">
     <Position X="13" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAQAAAAAAAAUAAAAAgAAAAAAgAAAAAAA=</HashCode>
@@ -263,9 +270,9 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="rpg_Game_V1.ActionModels.Interface.IOffensive" Collapsed="true">
-    <Position X="13" Y="5.75" Width="1.5" />
+    <Position X="14.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAQAQAA=</HashCode>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAEAAAAAgAAAAAAAAAQAQAA=</HashCode>
       <FileName>ActionModels\Interface\IOffensive.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -280,14 +287,21 @@
     <Position X="14.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
-      <FileName>Weapons\Interface\IArmor.cs</FileName>
+      <FileName>Items\Interface\IArmor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="rpg_Game_V1.Weapons.Interface.IItem" Collapsed="true">
+    <Position X="13" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQQAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Items\Interface\IItem.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="rpg_Game_V1.Weapons.Interface.IWeapon" Collapsed="true">
-    <Position X="14.75" Y="5.75" Width="1.5" />
+    <Position X="16.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQQAAA=</HashCode>
-      <FileName>Weapons\Interface\IWeapon.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQQAAA=</HashCode>
+      <FileName>Items\Interface\IWeapon.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="rpg_Game_V1.Factories.EnemyType" Collapsed="true">
@@ -308,28 +322,28 @@
     <Position X="13" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAABACAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Weapons\Names\DarkStaffNames.cs</FileName>
+      <FileName>Items\Names\DarkStaffNames.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="rpg_Game_V1.Weapons.Names.PlateArmorsNames" Collapsed="true">
     <Position X="18.25" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Weapons\Names\PlateArmorsNames.cs</FileName>
+      <FileName>Items\Names\PlateArmorsNames.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="rpg_Game_V1.Weapons.Names.SaberNames" Collapsed="true">
     <Position X="13" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAAAAAAAAAAAAAAAAAIAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
-      <FileName>Weapons\Names\SaberNames.cs</FileName>
+      <FileName>Items\Names\SaberNames.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="rpg_Game_V1.Weapons.Names.TrinketsNames" Collapsed="true">
     <Position X="14.75" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAg=</HashCode>
-      <FileName>Weapons\Names\TrinketsNames.cs</FileName>
+      <FileName>Items\Names\TrinketsNames.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

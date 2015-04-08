@@ -1,6 +1,7 @@
-﻿namespace rpg_Game_V1.Weapons
+﻿using rpg_Game_V1.Weapons.Interface;
+namespace rpg_Game_V1.Weapons
 {
-    public abstract class Weapon : Items
+    public abstract class Weapon : Items, IItem
     {
 
         public int DmgValue { get; set; }

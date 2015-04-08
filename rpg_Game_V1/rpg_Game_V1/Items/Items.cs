@@ -2,9 +2,10 @@
 {
     using System;
 
-    using rpg_Game_V1.AbilityModels;    
+    using rpg_Game_V1.AbilityModels;
+    using rpg_Game_V1.Weapons.Interface;    
 
-    public abstract class Items
+    public abstract class Items: IItem
     {   
         public Items(string imageLocation)
         {

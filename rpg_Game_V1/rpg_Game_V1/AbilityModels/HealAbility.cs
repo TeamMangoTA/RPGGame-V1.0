@@ -19,8 +19,7 @@
         }
 
         public int HealtDmg { get; set; }
-        public int StaminaEffect { get; set; }
-        public int ManaEffect { get; set; }
+
         public int HitModf { get; set; }
 
         public HealAction CreatAction(Entity origin, Entity target)
