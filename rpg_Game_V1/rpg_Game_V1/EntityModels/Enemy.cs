@@ -35,9 +35,12 @@ namespace rpg_Game_V1.EntityModels
         public int DoAttack(Player target, int n)
         {
             var r = -1;
+            // TOCHECK: ch was = n!!!
             int ch = n;
             if (ch < 0) { return -1; }
-            var tempattack = (LightAttackAbility)attacks[ch];
+            // there are still no abiilities so maybe ti is the reason for the exception ...дейба
+            // that was the reason :D - дейба
+            var tempattack = (LightAttackAbility)this.attacks[ch];
            
             r = this.DoAttack(target, tempattack);
             

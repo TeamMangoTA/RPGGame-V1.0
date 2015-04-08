@@ -1,4 +1,6 @@
-﻿using System;
+﻿using rpg_Game_V1.EntityModels;
+using rpg_Game_V1.Factories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +14,7 @@ namespace rpg_Game_V1
 {
     public partial class ChoiceWindow : Form
     {
-        public BattlePath battlePath;
+        public BattlePath battlePath { get; set; }
 
         public ChoiceWindow()
         {
@@ -27,7 +29,7 @@ namespace rpg_Game_V1
 
         private void buttonInventory_Click(object sender, EventArgs e)
         {
-            battlePath.inventoryScreen = new InventoryWindow(battlePath.player);
+            this.battlePath.inventoryScreen = new InventoryWindow(this.battlePath.player);
             battlePath.inventoryScreen.ShowDialog();
         }
 
@@ -38,8 +40,8 @@ namespace rpg_Game_V1
 
         private void buttonContinue_Click(object sender, EventArgs e)
         {
-            battlePath.battleScreen = new CombatScreen(battlePath.player, battlePath.enemy);
-            battlePath.battleScreen.ShowDialog();
+            this.battlePath.battleScreen = new CombatScreen(this.battlePath.player, this.battlePath.enemy);
+            this.battlePath.battleScreen.ShowDialog();
         }
     }
 }

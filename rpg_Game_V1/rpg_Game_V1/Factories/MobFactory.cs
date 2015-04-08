@@ -47,6 +47,7 @@ namespace rpg_Game_V1.Factories
 
             Enemy newEnemy = new Enemy(name, health, mana, stamina, dexterity, intelligence, strenght, imageLocation, defenceRation);
 
+            newEnemy.AddAbility(new LightAttackAbility(RndGenertor.Next(10, 50), RndGenertor.Next(10, 50), RndGenertor.Next(10, 50), RndGenertor.Next(10, 50), "attack"));
             return newEnemy;
         }
 

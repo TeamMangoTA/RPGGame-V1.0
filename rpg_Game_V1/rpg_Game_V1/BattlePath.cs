@@ -20,7 +20,7 @@ namespace rpg_Game_V1
         public BattlePath()
         {
             this.mFactory = MobFactory.Instance;
-            this.enemy = mFactory.CreateEnemy();
+            this.enemy = this.mFactory.CreateEnemy();
             this.player = new Player("Pavel", 100, 100, 5, 0, 0, 0, 0);
 
             for (int i = 0; i < 7; i++)
