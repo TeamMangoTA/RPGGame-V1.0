@@ -1,7 +1,7 @@
 ![Team Mango](http://puu.sh/h4Qa2/9267fcef08.gif)
 
 ##Introduction
-The RPG game "" was developed as a team project for the C# OOP Course in [Telerik Academy](http://telerikacademy.com/) by the “Mango” team.
+The RPG game was developed as a team project for the C# OOP Course in [Telerik Academy](http://telerikacademy.com/) by the “Mango” team.
 
 ##Team Members
 | Name              | Username      |
@@ -19,24 +19,21 @@ The RPG game "" was developed as a team project for the C# OOP Course in [Teleri
 ###Game Description
 
 ###Menu
-
-
-
-###Gameplay
+![Menu](http://puu.sh/h5Qxo/2c62e44575.png)
 
 
 ###Screenshots
 
-![Screenshot](https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/Media/Screens/screen1.jpg?raw=true)
-
-
+![Screenshot1](https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/Media/Screens/screen1.jpg?raw=true)
+![Screenshot2](http://puu.sh/h5QEB/535b3cad43.jpg?raw=true)
+![Screenshot3](http://puu.sh/h5QzQ/881fccfaf9.png?raw=true)
 
 
 #Object-Oriented Programming
 
 ##General Requirements Fulfilled:
 
-####Defined and implemented the following object-oriented assets our your project:
+####Defined and implemented the following object-oriented assets in our project:
 
  At least 5 interfaces (with one or more implementations)
 
@@ -49,8 +46,6 @@ The RPG game "" was developed as a team project for the C# OOP Course in [Teleri
  At least 3 levels of depth in inheritance
 
  At least 1 polymorphism usage
-
- At least 1 structure
 
  At least 1 enumeration
 
@@ -72,5 +67,6 @@ The RPG game "" was developed as a team project for the C# OOP Course in [Teleri
 
  User interface (UI) – console, graphical, web or mobile
 
+##Class Diagram:
 ![Diagram](https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/ClassDiagram.png?raw=true)
 
