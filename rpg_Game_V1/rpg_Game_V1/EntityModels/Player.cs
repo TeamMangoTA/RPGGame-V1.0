@@ -71,15 +71,17 @@ namespace rpg_Game_V1.EntityModels
                 if (thing is Saber)
                 {
                     var temp = (Saber)thing;
-                    LightAttackAbility tempAbility = new LightAttackAbility(temp);
-                    var toRemove = attacks.FirstOrDefault(w => w == tempAbility);
+                    LightAttackAbility tempAbility = new LightAttackAbility(temp,this);
+                    var tempR=attacks.Find(o=>o.Name==thing.Name+" Light Attack");
+                    attacks.Remove(tempR);
                 }
 
                 else
                 {
                     var temp=(DarkStaff)thing;
-                    LightMagicAbility tempAbility = new LightMagicAbility(temp);
-                    var toRemove = attacks.FirstOrDefault(w => w == tempAbility);
+                    LightMagicAbility tempAbility = new LightMagicAbility(temp,this);
+                    var tempR = attacks.Find(o => o.Name == thing.Name + " Light Magic Attack");
+                    attacks.Remove(tempR);
                 }
                 
 
@@ -131,7 +133,6 @@ namespace rpg_Game_V1.EntityModels
                     Equiped.Add(thing);
                     var temp = (Trinket)thing;
                     attacks.Add(new HealAbility(temp));
-                    this.ChangeHealth(temp.DmgValue);
                     trinketCapacity--;
                     this.Inventory.Remove(thing);
                 }
@@ -145,9 +146,8 @@ namespace rpg_Game_V1.EntityModels
 
             var temp = (Trinket)thing;
             var tempAbility = new HealAbility(temp);
-            var toRemove = attacks.FirstOrDefault(w => w == tempAbility);
-            
-            attacks.Remove(toRemove);
+            var tempR = attacks.Find(o => o.Name == thing.Name);
+            attacks.Remove(tempR);
             this.trinketCapacity++;
             
 

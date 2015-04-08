@@ -46,7 +46,7 @@ namespace rpg_Game_V1.AbilityModels
             this.ManaEffect = staff.ManaCost;
             this.StaminaEffect = 0;
             this.HitModf = staff.AccuracyRating;
-            this.Name = staff.Name + " Light Attack";
+            this.Name = staff.Name + " Light Magic Attack";
         }
         public MagicAttack CreatAction(Entity origin,Entity target)
         {
