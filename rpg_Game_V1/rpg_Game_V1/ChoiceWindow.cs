@@ -27,6 +27,7 @@ namespace rpg_Game_V1
 
         private void buttonInventory_Click(object sender, EventArgs e)
         {
+            battlePath.inventoryScreen = new InventoryWindow(battlePath.player);
             battlePath.inventoryScreen.ShowDialog();
         }
 
@@ -37,6 +38,7 @@ namespace rpg_Game_V1
 
         private void buttonContinue_Click(object sender, EventArgs e)
         {
+            battlePath.battleScreen = new CombatScreen(battlePath.player, battlePath.enemy);
             battlePath.battleScreen.ShowDialog();
         }
     }

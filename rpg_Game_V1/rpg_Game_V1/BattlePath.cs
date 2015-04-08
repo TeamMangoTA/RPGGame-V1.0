@@ -29,9 +29,9 @@ namespace rpg_Game_V1
                 player.AddItem(itemRnd);                
             }
 
-            inventoryScreen = new InventoryWindow(player);
+            // inventoryScreen = new InventoryWindow(player);
            //inventoryScreen.ShowDialog();
-            battleScreen = new CombatScreen(player, enemy);
+           // battleScreen = new CombatScreen(player, enemy);
           // battleScreen.ShowDialog();
         }
     }
