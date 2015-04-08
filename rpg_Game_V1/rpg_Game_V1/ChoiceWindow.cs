@@ -40,9 +40,16 @@ namespace rpg_Game_V1
 
         private void buttonContinue_Click(object sender, EventArgs e)
         {
-            this.battlePath.enemy = this.battlePath.mFactory.CreateEnemy();
-            this.battlePath.battleScreen = new CombatScreen(this.battlePath.player, this.battlePath.enemy);
-            this.battlePath.battleScreen.ShowDialog();
+            if (this.battlePath.player.Info.Health < 0)
+            {
+                //lose;
+            }
+            else
+            {
+                this.battlePath.enemy = this.battlePath.mFactory.CreateEnemy();
+                this.battlePath.battleScreen = new CombatScreen(this.battlePath.player, this.battlePath.enemy);
+                this.battlePath.battleScreen.ShowDialog();
+            }
         }
     }
 }

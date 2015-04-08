@@ -1,4 +1,5 @@
 ﻿using rpg_Game_V1.EntityModels;
+using rpg_Game_V1.Factories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace rpg_Game_V1
     {
         public Player HumanPlayer { get; set; }
         public Enemy Mob { get; set; }
+        Random rng = new Random();
 
         public CombatScreen()
         {
@@ -83,6 +85,7 @@ namespace rpg_Game_V1
 
             if(this.HumanPlayer.Info.Health<=0||this.Mob.Info.Health<=0)
             {
+                this.HumanPlayer.AddItem(ItemFactory.CreateRandomItem());
                 this.Close();
             }
 
