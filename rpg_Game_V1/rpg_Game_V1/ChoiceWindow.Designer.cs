@@ -35,6 +35,8 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonRefreshStats = new System.Windows.Forms.Button();
             this.labelStatsPlayer = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.labelName = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -97,9 +99,11 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.buttonRefreshStats);
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.Controls.Add(this.labelName);
+            this.flowLayoutPanel1.Controls.Add(this.textBox1);
             this.flowLayoutPanel1.Controls.Add(this.labelStatsPlayer);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Controls.Add(this.buttonRefreshStats);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(820, 49);
@@ -107,9 +111,9 @@
             // 
             // buttonRefreshStats
             // 
-            this.buttonRefreshStats.Location = new System.Drawing.Point(3, 3);
+            this.buttonRefreshStats.Location = new System.Drawing.Point(276, 3);
             this.buttonRefreshStats.Name = "buttonRefreshStats";
-            this.buttonRefreshStats.Size = new System.Drawing.Size(127, 46);
+            this.buttonRefreshStats.Size = new System.Drawing.Size(67, 46);
             this.buttonRefreshStats.TabIndex = 0;
             this.buttonRefreshStats.Text = "Refresh stats";
             this.buttonRefreshStats.UseVisualStyleBackColor = true;
@@ -118,11 +122,28 @@
             // labelStatsPlayer
             // 
             this.labelStatsPlayer.AutoSize = true;
-            this.labelStatsPlayer.Location = new System.Drawing.Point(136, 0);
+            this.labelStatsPlayer.Location = new System.Drawing.Point(224, 0);
             this.labelStatsPlayer.Name = "labelStatsPlayer";
             this.labelStatsPlayer.Size = new System.Drawing.Size(46, 17);
             this.labelStatsPlayer.TabIndex = 1;
             this.labelStatsPlayer.Text = "label1";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(81, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(137, 22);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "s";
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.Location = new System.Drawing.Point(3, 0);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(72, 17);
+            this.labelName.TabIndex = 3;
+            this.labelName.Text = "Set name:";
             // 
             // ChoiceWindow
             // 
@@ -148,6 +169,8 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button buttonRefreshStats;
         private System.Windows.Forms.Label labelStatsPlayer;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.TextBox textBox1;
 
     }
 }
