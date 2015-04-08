@@ -1,4 +1,5 @@
-﻿using rpg_Game_V1.EntityModels;
+﻿using rpg_Game_V1.Engine;
+using rpg_Game_V1.EntityModels;
 using rpg_Game_V1.Factories;
 using System;
 using System.Collections.Generic;
@@ -24,19 +25,28 @@ namespace rpg_Game_V1
         public ChoiceWindow(BattlePath bp)
         {
             InitializeComponent();
+            foreach (var item in CoreEngine.OpenForms)
+            {
+                if(item is CombatScreen||item is LooseWindow)
+                {
+                    item.Close();
+                }
+            }
             this.battlePath = bp;
             this.labelStatsPlayer.Text = ScreenStats();
+            
         }
 
         private void buttonInventory_Click(object sender, EventArgs e)
         {
             this.battlePath.inventoryScreen = new InventoryWindow(this.battlePath.player);
+           
             battlePath.inventoryScreen.ShowDialog();
         }
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             Program.InitialiseGame();            
         }
 
@@ -44,12 +54,15 @@ namespace rpg_Game_V1
         {
             if (this.battlePath.player.Info.Health < 0)
             {
-                //lose;
+                var looser = new LooseWindow();
+                this.Hide();
+                looser.ShowDialog();
             }
             else
             {
                 this.battlePath.enemy = this.battlePath.mFactory.CreateEnemy();
                 this.battlePath.battleScreen = new CombatScreen(this.battlePath.player, this.battlePath.enemy);
+                CoreEngine.OpenForms.Add(this.battlePath.battleScreen);
                 this.battlePath.battleScreen.ShowDialog();
             }
         }

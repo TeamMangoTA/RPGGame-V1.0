@@ -20,12 +20,13 @@ namespace rpg_Game_V1
 
         private void buttonRestart_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Program.InitialiseGame();
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-           // Environment.Exit(this);
+            this.Close();
         }
     }
 }
