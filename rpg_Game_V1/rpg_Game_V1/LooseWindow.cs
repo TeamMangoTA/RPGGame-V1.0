@@ -15,6 +15,7 @@ namespace rpg_Game_V1
         public LooseWindow()
         {
             InitializeComponent();
+            this.pictureBoxLooser.Load(@"../../../Media/LooseScreen.jpg");
         }
 
         private void buttonRestart_Click(object sender, EventArgs e)
