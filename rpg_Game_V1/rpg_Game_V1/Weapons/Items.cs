@@ -12,7 +12,6 @@
         }
 
         public string Name { get; set; }
-        //public abstract Ability AddAbility();
         public int EquipmentCost { get; set; }
         public string Image { get; set; }
 

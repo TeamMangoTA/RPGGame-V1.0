@@ -46,7 +46,6 @@
   <ItemGroup>
     <Compile Include="AbilityModels\Ability.cs" />
     <Compile Include="AbilityModels\AttackAbility.cs" />
-    <Compile Include="AbilityModels\DeffAbility.cs" />
     <Compile Include="AbilityModels\HealAbility.cs" />
     <Compile Include="AbilityModels\Interface\IAbility.cs" />
     <Compile Include="AbilityModels\LightAttackAbility.cs" />

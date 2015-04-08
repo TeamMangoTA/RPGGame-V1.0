@@ -6,7 +6,9 @@
     using Weapons.Interface;
 
     public class Trinket : Weapon
-    {  
+    {
+        public int StaminaCost { get; set; }
+
         public Trinket(string name, int dmg, int acc, int staminacost, string imageLocation)
             : base(imageLocation)
         {
@@ -16,9 +18,8 @@
             this.StaminaCost = staminacost;
         }
 
-        public int DmgValue { get; set; }
-        public int AccuracyRating { get; set; }
-        public int StaminaCost { get; set; }
+
+       
 
         public override string ToString()
         {

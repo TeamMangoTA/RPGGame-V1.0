@@ -5,8 +5,9 @@
     using rpg_Game_V1.Weapons;
     using rpg_Game_V1.ActionModels;
     using rpg_Game_V1.EntityModels;
+    using rpg_Game_V1.AbilityModels.Interface;
     
-    public class HealAbility : AttackAbility
+    public class HealAbility : AttackAbility,IAbility<HealAction>
     {
         public HealAbility(Trinket trinket)
         {
@@ -22,7 +23,7 @@
         public int ManaEffect { get; set; }
         public int HitModf { get; set; }
 
-        public HealAction CreatAction(Entity origin)
+        public HealAction CreatAction(Entity origin, Entity target)
         {            
             var player = (Player)origin;
 
@@ -41,5 +42,7 @@
         {
             return this.Name + string.Format(" - Sc: {0}", this.HealtDmg);
         }
+
+
     }
 }

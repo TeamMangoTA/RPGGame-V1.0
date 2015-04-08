@@ -196,7 +196,7 @@
             else
             {
                 var skill = (HealAbility)a;
-                var action = skill.CreatAction(this);
+                var action = skill.CreatAction(this,null);
                 var resolution = action;
                 var r = resolution.Resolve();
                 return r;

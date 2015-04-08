@@ -4,7 +4,7 @@
 
     using Weapons.Interface;
 
-    public class DarkStaff:Weapon
+    public class DarkStaff:Weapon,IWeapon
     {  
         public DarkStaff(string name, int dmg, int acc,int manaCost, string imageLocation)
             : base(imageLocation)
@@ -13,10 +13,12 @@
             this.DmgValue = dmg;
             this.AccuracyRating = acc;
             this.ManaCost = manaCost;
+            this.StaminaCost = 0;
             this.EquipmentCost = 1;
         }
 
-        public int ManaCost { get; set; }        
+        public int ManaCost { get; set; }
+        public int StaminaCost { get; set; }    
 
         public override string ToString()
         {

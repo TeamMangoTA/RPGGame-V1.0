@@ -3,7 +3,7 @@
     public interface IHealer
     {
         int DmgValue { get; set; }
-        //public string ID { get; set; }
+       
         int ManaEffect { get; set; }
         int StaminaEffect { get; set; }
 

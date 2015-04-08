@@ -5,8 +5,9 @@
     using ActionModels;
     using EntityModels;
     using Weapons;
+    using rpg_Game_V1.AbilityModels.Interface;
 
-    class LightMagicAbility:AttackAbility
+    class LightMagicAbility:AttackAbility,IAbility<MagicAttack>
     {
         public int HealtDmg { get; set; }
         
@@ -65,6 +66,11 @@
         {
             return this.Name + string.Format(" - Sc: {0}", this.StaminaEffect);
         }
+
+
+
+
+
     }
  }
 

@@ -4,9 +4,10 @@
 
     using ActionModels;
     using EntityModels;
-    using Weapons;    
+    using Weapons;
+    using rpg_Game_V1.AbilityModels.Interface;    
 
-    public class LightAttackAbility:AttackAbility
+    public class LightAttackAbility:AttackAbility,IAbility<WeaponAttack>
     {
         public LightAttackAbility(int healthDamage, int staminaCost, int manaCost, int hitPercent, string name)
         {
@@ -65,6 +66,12 @@
         public override string ToString()
         {
             return this.Name + string.Format(" - Sc: {0}", this.StaminaEffect);
+        }
+
+
+        public GameAction CreatAction()
+        {
+            throw new NotImplementedException();
         }
     }
 }
