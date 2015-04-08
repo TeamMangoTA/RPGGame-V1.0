@@ -16,17 +16,16 @@ The RPG game was developed as a team project for the C# OOP Course in [Telerik A
 |VenelinPetkov      |venelingp      |
 
 
-###Game Description
 
 ###Menu
-![Menu](http://puu.sh/h5Qxo/2c62e44575.png)
+![Menu](http://puu.sh/h5SWc/670b838460.png)
 
 
 ###Screenshots
 
 ![Screenshot1](https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/Media/Screens/screen1.jpg?raw=true)
-![Screenshot2](http://puu.sh/h5QEB/535b3cad43.jpg?raw=true)
-![Screenshot3](http://puu.sh/h5QzQ/881fccfaf9.png?raw=true)
+![Screenshot2](http://puu.sh/h5T2x/668c9efba1.jpg?raw=true)
+![Screenshot3](http://puu.sh/h5T0Y/896cca49c8.jpg?raw=true)
 
 
 #Object-Oriented Programming
@@ -68,5 +67,5 @@ The RPG game was developed as a team project for the C# OOP Course in [Telerik A
  User interface (UI) – console, graphical, web or mobile
 
 ##Class Diagram:
-![Diagram](https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/ClassDiagram.png?raw=true)
+![Diagram](http://puu.sh/h60Y4/114cdd95a1.png?raw=true)
 
