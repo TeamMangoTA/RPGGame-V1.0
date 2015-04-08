@@ -27,8 +27,6 @@ The RPG game was developed as a team project for the C# OOP Course in [Telerik A
 ![Screenshot1](https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/Media/Screens/Screen3.jpg?raw=true)
 ![Screenshot1](https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/Media/Screens/Screen4.jpg?raw=true)
 ![Screenshot1](https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/Media/Screens/Screen5.jpg?raw=true)
-![Screenshot1](https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/Media/Screens/Screen1.jpg?raw=true)
-
 
 #Object-Oriented Programming
 
