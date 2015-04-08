@@ -62,6 +62,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.DimGray;
             this.tableLayoutPanel1.ColumnCount = 5;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -101,65 +102,78 @@
             // 
             // buttonEquipItem
             // 
+            this.buttonEquipItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonEquipItem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonEquipItem.FlatAppearance.BorderColor = System.Drawing.Color.GreenYellow;
+            this.buttonEquipItem.FlatAppearance.BorderSize = 4;
+            this.buttonEquipItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEquipItem.Font = new System.Drawing.Font("MetalShred", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEquipItem.ForeColor = System.Drawing.Color.GreenYellow;
             this.buttonEquipItem.Location = new System.Drawing.Point(1007, 444);
             this.buttonEquipItem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEquipItem.Name = "buttonEquipItem";
             this.buttonEquipItem.Size = new System.Drawing.Size(249, 61);
             this.buttonEquipItem.TabIndex = 24;
             this.buttonEquipItem.Text = "Equip";
-            this.buttonEquipItem.UseVisualStyleBackColor = true;
+            this.buttonEquipItem.UseVisualStyleBackColor = false;
             this.buttonEquipItem.Click += new System.EventHandler(this.buttonEquipItem_Click);
             // 
             // comboBoxEquip
             // 
+            this.comboBoxEquip.BackColor = System.Drawing.Color.GreenYellow;
             this.comboBoxEquip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxEquip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxEquip.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxEquip.FormattingEnabled = true;
             this.comboBoxEquip.Location = new System.Drawing.Point(1007, 407);
             this.comboBoxEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxEquip.Name = "comboBoxEquip";
-            this.comboBoxEquip.Size = new System.Drawing.Size(249, 24);
+            this.comboBoxEquip.Size = new System.Drawing.Size(249, 23);
             this.comboBoxEquip.TabIndex = 19;
             // 
             // StatsTrinketLabel
             // 
             this.StatsTrinketLabel.AutoSize = true;
             this.StatsTrinketLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StatsTrinketLabel.Font = new System.Drawing.Font("Lucida Console", 7F);
+            this.StatsTrinketLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.StatsTrinketLabel.Location = new System.Drawing.Point(756, 279);
             this.StatsTrinketLabel.Name = "StatsTrinketLabel";
             this.StatsTrinketLabel.Size = new System.Drawing.Size(245, 126);
             this.StatsTrinketLabel.TabIndex = 13;
-            this.StatsTrinketLabel.Text = "Trinket  stats";
             // 
             // StatsArmorLabel
             // 
             this.StatsArmorLabel.AutoSize = true;
             this.StatsArmorLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StatsArmorLabel.Font = new System.Drawing.Font("Lucida Console", 7F);
+            this.StatsArmorLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.StatsArmorLabel.Location = new System.Drawing.Point(505, 279);
             this.StatsArmorLabel.Name = "StatsArmorLabel";
             this.StatsArmorLabel.Size = new System.Drawing.Size(245, 126);
             this.StatsArmorLabel.TabIndex = 12;
-            this.StatsArmorLabel.Text = "Armor  stats";
             // 
             // StatsWeaponTwooLabel
             // 
             this.StatsWeaponTwooLabel.AutoSize = true;
             this.StatsWeaponTwooLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StatsWeaponTwooLabel.Font = new System.Drawing.Font("Lucida Console", 7F);
+            this.StatsWeaponTwooLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.StatsWeaponTwooLabel.Location = new System.Drawing.Point(254, 279);
             this.StatsWeaponTwooLabel.Name = "StatsWeaponTwooLabel";
             this.StatsWeaponTwooLabel.Size = new System.Drawing.Size(245, 126);
             this.StatsWeaponTwooLabel.TabIndex = 11;
-            this.StatsWeaponTwooLabel.Text = "Weapon 2  stats";
             // 
             // StatsWeaponOneLabel
             // 
             this.StatsWeaponOneLabel.AutoSize = true;
             this.StatsWeaponOneLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StatsWeaponOneLabel.Font = new System.Drawing.Font("Lucida Console", 7F);
+            this.StatsWeaponOneLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.StatsWeaponOneLabel.Location = new System.Drawing.Point(3, 279);
             this.StatsWeaponOneLabel.Name = "StatsWeaponOneLabel";
             this.StatsWeaponOneLabel.Size = new System.Drawing.Size(245, 126);
             this.StatsWeaponOneLabel.TabIndex = 10;
-            this.StatsWeaponOneLabel.Text = "Weapon 1  stats";
             // 
             // pictureBox4
             // 
@@ -198,6 +212,8 @@
             // 
             this.InventoryLabel.AutoSize = true;
             this.InventoryLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InventoryLabel.Font = new System.Drawing.Font("Lucida Console", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.InventoryLabel.ForeColor = System.Drawing.Color.GreenYellow;
             this.InventoryLabel.Location = new System.Drawing.Point(1007, 0);
             this.InventoryLabel.Name = "InventoryLabel";
             this.InventoryLabel.Size = new System.Drawing.Size(249, 26);
@@ -208,6 +224,8 @@
             // 
             this.TrinketLabel.AutoSize = true;
             this.TrinketLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TrinketLabel.Font = new System.Drawing.Font("Lucida Console", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TrinketLabel.ForeColor = System.Drawing.Color.GreenYellow;
             this.TrinketLabel.Location = new System.Drawing.Point(756, 0);
             this.TrinketLabel.Name = "TrinketLabel";
             this.TrinketLabel.Size = new System.Drawing.Size(245, 26);
@@ -218,6 +236,8 @@
             // 
             this.ArmorLabel.AutoSize = true;
             this.ArmorLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ArmorLabel.Font = new System.Drawing.Font("Lucida Console", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ArmorLabel.ForeColor = System.Drawing.Color.GreenYellow;
             this.ArmorLabel.Location = new System.Drawing.Point(505, 0);
             this.ArmorLabel.Name = "ArmorLabel";
             this.ArmorLabel.Size = new System.Drawing.Size(245, 26);
@@ -228,6 +248,8 @@
             // 
             this.WeaponTwoLabel.AutoSize = true;
             this.WeaponTwoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.WeaponTwoLabel.Font = new System.Drawing.Font("Lucida Console", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.WeaponTwoLabel.ForeColor = System.Drawing.Color.GreenYellow;
             this.WeaponTwoLabel.Location = new System.Drawing.Point(254, 0);
             this.WeaponTwoLabel.Name = "WeaponTwoLabel";
             this.WeaponTwoLabel.Size = new System.Drawing.Size(245, 26);
@@ -238,6 +260,8 @@
             // 
             this.WeaponOneLabel.AutoSize = true;
             this.WeaponOneLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.WeaponOneLabel.Font = new System.Drawing.Font("Lucida Console", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.WeaponOneLabel.ForeColor = System.Drawing.Color.GreenYellow;
             this.WeaponOneLabel.Location = new System.Drawing.Point(3, 0);
             this.WeaponOneLabel.Name = "WeaponOneLabel";
             this.WeaponOneLabel.Size = new System.Drawing.Size(245, 26);
@@ -270,9 +294,11 @@
             // 
             this.InventoryItems.AutoSize = true;
             this.InventoryItems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InventoryItems.Font = new System.Drawing.Font("Lucida Console", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.InventoryItems.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.InventoryItems.Location = new System.Drawing.Point(3, 0);
             this.InventoryItems.Name = "InventoryItems";
-            this.InventoryItems.Size = new System.Drawing.Size(104, 17);
+            this.InventoryItems.Size = new System.Drawing.Size(127, 13);
             this.InventoryItems.TabIndex = 14;
             this.InventoryItems.Text = "Inventory irems";
             // 
@@ -289,13 +315,19 @@
             // 
             // buttonUnequip
             // 
+            this.buttonUnequip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonUnequip.FlatAppearance.BorderColor = System.Drawing.Color.GreenYellow;
+            this.buttonUnequip.FlatAppearance.BorderSize = 4;
+            this.buttonUnequip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUnequip.Font = new System.Drawing.Font("MetalShred", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUnequip.ForeColor = System.Drawing.Color.GreenYellow;
             this.buttonUnequip.Location = new System.Drawing.Point(3, 2);
             this.buttonUnequip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonUnequip.Name = "buttonUnequip";
             this.buttonUnequip.Size = new System.Drawing.Size(524, 47);
             this.buttonUnequip.TabIndex = 0;
             this.buttonUnequip.Text = "Unequip";
-            this.buttonUnequip.UseVisualStyleBackColor = true;
+            this.buttonUnequip.UseVisualStyleBackColor = false;
             this.buttonUnequip.Click += new System.EventHandler(this.buttonUnequip_Click);
             // 
             // flowLayoutPanel2
@@ -312,11 +344,14 @@
             // 
             // comboBoxUnequip
             // 
+            this.comboBoxUnequip.BackColor = System.Drawing.Color.GreenYellow;
+            this.comboBoxUnequip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxUnequip.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxUnequip.FormattingEnabled = true;
-            this.comboBoxUnequip.Location = new System.Drawing.Point(3, 7);
+            this.comboBoxUnequip.Location = new System.Drawing.Point(3, 8);
             this.comboBoxUnequip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxUnequip.Name = "comboBoxUnequip";
-            this.comboBoxUnequip.Size = new System.Drawing.Size(524, 24);
+            this.comboBoxUnequip.Size = new System.Drawing.Size(524, 23);
             this.comboBoxUnequip.TabIndex = 0;
             // 
             // InventoryWindow

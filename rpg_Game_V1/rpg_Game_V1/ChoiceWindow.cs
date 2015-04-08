@@ -69,7 +69,7 @@ namespace rpg_Game_V1
 
         private string ScreenStats()
         {
-            var result = string.Format("Name: {0}, Health: {1}, Mana: {2}, Stamina: {3}, Dx: {4}, Int: {5}, Str: {6}, DR: {7}",
+            var result = string.Format("Name: {0}, Health: {1}\n\rMana: {2}, Stamina: {3}\n\rDx: {4}, Int: {5}, Str: {6}, DR: {7}",
                 this.battlePath.player.Name,
                 this.battlePath.player.Info.Health, this.battlePath.player.Info.Mana, this.battlePath.player.Info.Stamina, this.battlePath.player.Info.Dex, this.battlePath.player.Info.Int, this.battlePath.player.Info.Str, this.battlePath.player.Info.DefenceRating);
             return result;
