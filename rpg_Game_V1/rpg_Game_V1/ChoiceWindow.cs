@@ -35,7 +35,9 @@ namespace rpg_Game_V1
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            Program.Main();
+           
+            Program.InitialiseGame();
+            this.Close();
         }
 
         private void buttonContinue_Click(object sender, EventArgs e)

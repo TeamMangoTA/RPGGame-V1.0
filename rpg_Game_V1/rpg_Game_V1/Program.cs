@@ -31,15 +31,23 @@ namespace rpg_Game_V1
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-            // UNCOMENT here ==========================>
-            var Battle = new BattlePath();
-            var choiceWindow = new ChoiceWindow(Battle);
-            choiceWindow.ShowDialog();
+            InitialiseGame();
+            //// UNCOMENT here ==========================>
+            //var Battle = new BattlePath();
+            //var choiceWindow = new ChoiceWindow(Battle);
+            //choiceWindow.ShowDialog();
 
 
 
 
             
+        }
+
+        public static void  InitialiseGame()
+        {
+            var Battle = new BattlePath();
+            var choiceWindow = new ChoiceWindow(Battle);
+            choiceWindow.ShowDialog();
         }
     }
 }
