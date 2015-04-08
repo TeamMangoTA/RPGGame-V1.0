@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using rpg_Game_V1.ActionModels;
-using rpg_Game_V1.EntityModels;
-using rpg_Game_V1.Weapons;
-
-namespace rpg_Game_V1.AbilityModels
+﻿namespace rpg_Game_V1.AbilityModels
 {
+    using System;
+
+    using ActionModels;
+    using EntityModels;
+    using Weapons;
+
     class LightMagicAbility:AttackAbility
     {
         public int HealtDmg { get; set; }

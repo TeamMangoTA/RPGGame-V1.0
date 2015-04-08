@@ -1,20 +1,12 @@
-﻿
-namespace rpg_Game_V1.Weapons
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
+﻿namespace rpg_Game_V1.Weapons
+{  
     using System.Text;
-    using System.Threading.Tasks;
-    using rpg_Game_V1.AbilityModels;
-    using rpg_Game_V1.Weapons.Interface;
+   
+    using AbilityModels;
+    using Weapons.Interface;
 
     public class Trinket : Weapon
-    {
-        public int DmgValue { get; set; }
-        public int AccuracyRating { get; set; }
-        public int StaminaCost { get; set; }
-
+    {  
         public Trinket(string name, int dmg, int acc, int staminacost, string imageLocation)
             : base(imageLocation)
         {
@@ -23,6 +15,10 @@ namespace rpg_Game_V1.Weapons
             this.AccuracyRating = acc;
             this.StaminaCost = staminacost;
         }
+
+        public int DmgValue { get; set; }
+        public int AccuracyRating { get; set; }
+        public int StaminaCost { get; set; }
 
         public override string ToString()
         {

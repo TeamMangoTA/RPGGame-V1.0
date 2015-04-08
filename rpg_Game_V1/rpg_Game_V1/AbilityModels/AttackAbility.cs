@@ -1,13 +1,8 @@
-﻿using rpg_Game_V1.AbilityModels.Interface;
-using rpg_Game_V1.ActionModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace rpg_Game_V1.AbilityModels
+﻿namespace rpg_Game_V1.AbilityModels
 {
+    using AbilityModels.Interface;
+    using ActionModels;
+
     public abstract class AttackAbility:Ability
     {
         
@@ -18,7 +13,5 @@ namespace rpg_Game_V1.AbilityModels
                 return "Attack";
             }
         }
-
-        
     }
 }

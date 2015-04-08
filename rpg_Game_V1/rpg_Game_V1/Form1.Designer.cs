@@ -66,14 +66,13 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Lucida Console", 7F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(437, 5);
+            this.label2.Location = new System.Drawing.Point(448, 5);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(5);
-            this.label2.Size = new System.Drawing.Size(299, 351);
+            this.label2.Size = new System.Drawing.Size(306, 363);
             this.label2.TabIndex = 5;
             this.label2.Text = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button1
             // 
@@ -105,7 +104,7 @@
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(277, 23);
-            this.comboBox1.TabIndex = 2;            
+            this.comboBox1.TabIndex = 2;
             // 
             // label1
             // 
@@ -113,14 +112,13 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Lucida Console", 7F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(744, 5);
+            this.label1.Location = new System.Drawing.Point(762, 5);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(5);
-            this.label1.Size = new System.Drawing.Size(291, 351);
+            this.label1.Size = new System.Drawing.Size(292, 363);
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -133,17 +131,16 @@
             this.flowLayoutPanel1.Controls.Add(this.HeroAttackResult);
             this.flowLayoutPanel1.Controls.Add(this.label3);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(437, 360);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(448, 372);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(299, 123);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(306, 128);
             this.flowLayoutPanel1.TabIndex = 3;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Location = new System.Drawing.Point(4, 46);
+            this.pictureBox2.Location = new System.Drawing.Point(4, 51);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(141, 73);
@@ -155,7 +152,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.Font = new System.Drawing.Font("Lucida Console", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(5, 24);
+            this.label4.Location = new System.Drawing.Point(5, 29);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(139, 18);
             this.label4.TabIndex = 3;
@@ -166,26 +163,24 @@
             // 
             this.HeroAttackResult.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.HeroAttackResult.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.HeroAttackResult.Location = new System.Drawing.Point(153, 46);
+            this.HeroAttackResult.Location = new System.Drawing.Point(153, 51);
             this.HeroAttackResult.Margin = new System.Windows.Forms.Padding(4);
             this.HeroAttackResult.Name = "HeroAttackResult";
             this.HeroAttackResult.Size = new System.Drawing.Size(141, 73);
             this.HeroAttackResult.TabIndex = 0;
             this.HeroAttackResult.TabStop = false;
-            this.HeroAttackResult.Click += new System.EventHandler(this.HeroAttackResult_Click);
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Lucida Console", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(152, 24);
+            this.label3.Location = new System.Drawing.Point(152, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "label3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -195,7 +190,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.22551F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.77449F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 298F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 299F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 2, 1);
@@ -221,9 +216,8 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1044, 492);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1063, 509);
             this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // flowLayoutPanel2
             // 
@@ -234,10 +228,10 @@
             this.flowLayoutPanel2.Controls.Add(this.comboBox1);
             this.flowLayoutPanel2.Controls.Add(this.button1);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(744, 360);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(762, 372);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(291, 123);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(292, 128);
             this.flowLayoutPanel2.TabIndex = 4;
             // 
             // label5
@@ -257,7 +251,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1044, 492);
+            this.ClientSize = new System.Drawing.Size(1063, 509);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CombatScreen";

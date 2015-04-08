@@ -1,19 +1,23 @@
-﻿using rpg_Game_V1.ActionModels;
-using rpg_Game_V1.EntityModels;
-using rpg_Game_V1.Weapons;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace rpg_Game_V1.AbilityModels
+﻿namespace rpg_Game_V1.AbilityModels
 {
+    using System;
+
+    using ActionModels;
+    using EntityModels;
+    using Weapons;    
+
     public class LightAttackAbility:AttackAbility
     {
+        public LightAttackAbility(int healthDamage, int staminaCost, int manaCost, int hitPercent, string name)
+        {
+            this.HealtDmg = healthDamage;
+            this.StaminaEffect = staminaCost;
+            this.ManaEffect = manaCost;
+            this.HitModf = hitPercent;
+            this.Name = name;
+        }
 
         public int HealtDmg { get; set; }
-        
         public int HitModf { get; set; }
 
         public override string AbilityType
@@ -24,15 +28,6 @@ namespace rpg_Game_V1.AbilityModels
             }
         }
 
-        public LightAttackAbility(int healthDamage, int staminaCost, int manaCost, int hitPercent, string name)
-        {
-            this.HealtDmg = healthDamage;
-            this.StaminaEffect = staminaCost;
-            this.ManaEffect = manaCost;
-            this.HitModf = hitPercent;
-            this.Name = name;
-        }
-
         public LightAttackAbility(Saber sword)
         {
             this.HealtDmg = sword.DmgValue;
@@ -41,6 +36,7 @@ namespace rpg_Game_V1.AbilityModels
             this.HitModf = sword.AccuracyRating;
             this.Name = sword.Name + " Light Attack";
         }
+
         public LightAttackAbility(Saber sword,Entity owner)
         {
             this.HealtDmg = sword.DmgValue + owner.Info.Str;
@@ -49,6 +45,7 @@ namespace rpg_Game_V1.AbilityModels
             this.HitModf = sword.AccuracyRating;
             this.Name = sword.Name + " Light Attack";
         }
+
         public WeaponAttack CreatAction(Entity origin,Entity target)
         {
             if (origin is Player)

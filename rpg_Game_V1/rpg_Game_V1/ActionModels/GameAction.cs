@@ -1,24 +1,17 @@
-﻿using rpg_Game_V1.AbilityModels;
-using rpg_Game_V1.EntityModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-namespace rpg_Game_V1.ActionModels
+﻿namespace rpg_Game_V1.ActionModels
 {
+    using rpg_Game_V1.AbilityModels;
+    using rpg_Game_V1.EntityModels;
+
     public abstract class GameAction
     {
-        public Entity Orgin { get; set; }
-        public Entity Target { get; set; }
-
-
         public GameAction(Entity p1, Entity p2, Ability a1)
         {
             this.Orgin = p1;
             this.Target = p2;
         }
+
+        public Entity Orgin { get; set; }
+        public Entity Target { get; set; }
     }
 }

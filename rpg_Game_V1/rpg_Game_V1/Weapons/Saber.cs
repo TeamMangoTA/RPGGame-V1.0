@@ -1,18 +1,12 @@
-﻿using rpg_Game_V1.AbilityModels;
-using rpg_Game_V1.Weapons.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace rpg_Game_V1.Weapons
+﻿namespace rpg_Game_V1.Weapons
 {
+    using System.Text;
+
+    using rpg_Game_V1.AbilityModels;
+    using rpg_Game_V1.Weapons.Interface;
+
     public class Saber : Weapon, IWeapon
     {
-        
-        public int StaminaCost { get; set; }
-
         public Saber(string name, int dmg, int acc,int staminacost, string imageLocation)
             : base(imageLocation)
         {
@@ -21,7 +15,9 @@ namespace rpg_Game_V1.Weapons
             this.AccuracyRating = acc;
             this.StaminaCost = staminacost;
             this.EquipmentCost = 1;
-        }        
+        }
+
+        public int StaminaCost { get; set; }
 
         public override string ToString()
         {

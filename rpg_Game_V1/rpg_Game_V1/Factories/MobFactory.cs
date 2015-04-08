@@ -1,20 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using rpg_Game_V1.EntityModels;
-using rpg_Game_V1.EntityModels.Interfaces;
-using rpg_Game_V1.AbilityModels;
-using rpg_Game_V1.AbilityModels.Interface;
-using rpg_Game_V1.ActionModels;
-using rpg_Game_V1.ActionModels.Interface;
-using rpg_Game_V1.Weapons;
-using rpg_Game_V1.Weapons.Interface;
-
-namespace rpg_Game_V1.Factories
+﻿namespace rpg_Game_V1.Factories
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    using rpg_Game_V1.EntityModels;
+    using rpg_Game_V1.EntityModels.Interfaces;
+    using rpg_Game_V1.AbilityModels;
+    using rpg_Game_V1.AbilityModels.Interface;
+    using rpg_Game_V1.ActionModels;
+    using rpg_Game_V1.ActionModels.Interface;
+    using rpg_Game_V1.Weapons;
+    using rpg_Game_V1.Weapons.Interface;
+
     public class MobFactory
     {
         private static Random RndGenertor = new Random();

@@ -1,22 +1,18 @@
-﻿using rpg_Game_V1.Weapons;
-using rpg_Game_V1.Weapons.Names;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace rpg_Game_V1.Factories
+﻿namespace rpg_Game_V1.Factories
 {
+    using System;
+    using System.Collections.Generic;
+
+    using rpg_Game_V1.Weapons;
+    using rpg_Game_V1.Weapons.Names;
+
     public static class ItemFactory
     {
         private const string ImagePath = "../../../Media/Items/{0}.png";
 
-        private static List<Items> ListOfItems = new List<Items>();
-        private static int GenerateTimesLimit = 0;
-
-       
         private static Random Rnd = new Random();
+        private static List<Items> ListOfItems = new List<Items>();
+        private static int GenerateTimesLimit = 0;        
 
         public static  Items CreateRandomItem()
         {

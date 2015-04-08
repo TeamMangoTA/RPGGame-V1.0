@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using rpg_Game_V1.Weapons.Interface;
-
-namespace rpg_Game_V1.Weapons
+﻿namespace rpg_Game_V1.Weapons
 {
-    public class DarkStaff:Weapon
-    {
-        
-        public int ManaCost { get; set; }
+    using System.Text;
 
+    using Weapons.Interface;
+
+    public class DarkStaff:Weapon
+    {  
         public DarkStaff(string name, int dmg, int acc,int manaCost, string imageLocation)
             : base(imageLocation)
         {
@@ -22,7 +16,7 @@ namespace rpg_Game_V1.Weapons
             this.EquipmentCost = 1;
         }
 
-        
+        public int ManaCost { get; set; }        
 
         public override string ToString()
         {

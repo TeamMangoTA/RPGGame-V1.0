@@ -1,24 +1,21 @@
-﻿using rpg_Game_V1.AbilityModels;
-using rpg_Game_V1.ActionModels;
-using rpg_Game_V1.Weapons;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace rpg_Game_V1.EntityModels
+﻿namespace rpg_Game_V1.EntityModels
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    using AbilityModels;
+    using ActionModels;
+    using Weapons;
+
     public class Player:GoodEntity
     {
-         List<AttackAbility> attacks = new List<AttackAbility>();
-        // Make Inventory and Equiped public property !!!
-        public List<Items> Inventory {get; set;}
-        public List<Items> Equiped { get; set; }
+        List<AttackAbility> attacks = new List<AttackAbility>();
+
         public int weaponCapacity = 2;
         public int armorCapacity = 1;
         public int trinketCapacity = 1;
-
+        
         public Player(string name,int health,int mana, int stamina,
             int dexterity, int intelligence, int strenght, int defenceRation)
             :base(name,health,mana,stamina,dexterity,intelligence,strenght,defenceRation)
@@ -26,6 +23,9 @@ namespace rpg_Game_V1.EntityModels
             this.Inventory  = new List<Items>();
             this.Equiped = new List<Items>();
         }
+
+        public List<Items> Inventory { get; set; }
+        public List<Items> Equiped { get; set; }
 
         public void AddItem(Items thing)
         {
@@ -41,6 +41,7 @@ namespace rpg_Game_V1.EntityModels
                 if(weaponCapacity>0)
                 {
                     this.Equiped.Add(thing);
+
                     if (thing is Saber)
                     {
                         var temp = (Saber)thing;
@@ -57,7 +58,6 @@ namespace rpg_Game_V1.EntityModels
                 }
 
                 //else { Console.WriteLine("Not Allowed"); }
-
             }
         }
 
@@ -75,7 +75,6 @@ namespace rpg_Game_V1.EntityModels
                     var tempR=attacks.Find(o=>o.Name==thing.Name+" Light Attack");
                     attacks.Remove(tempR);
                 }
-
                 else
                 {
                     var temp=(DarkStaff)thing;
@@ -83,15 +82,10 @@ namespace rpg_Game_V1.EntityModels
                     var tempR = attacks.Find(o => o.Name == thing.Name + " Light Magic Attack");
                     attacks.Remove(tempR);
                 }
-                
-
 
                 weaponCapacity++;
-                
             }
         }
-
-        
 
         public void EquipArmor(Items thing)
         {
@@ -119,8 +113,7 @@ namespace rpg_Game_V1.EntityModels
                 var temp = (PlateArmor)thing;
                 this.ChangeDefence(-temp.DefRatingMod);
 
-                armorCapacity++;
-                
+                armorCapacity++;                
             }
         }
 
@@ -148,12 +141,8 @@ namespace rpg_Game_V1.EntityModels
             var tempAbility = new HealAbility(temp);
             var tempR = attacks.Find(o => o.Name == thing.Name);
             attacks.Remove(tempR);
-            this.trinketCapacity++;
-            
-
+            this.trinketCapacity++;  
         }
-
-
 
         public int DoAttack(Enemy target, int n)
         {
@@ -168,8 +157,7 @@ namespace rpg_Game_V1.EntityModels
                 {
 
                     r = this.DoAttack(target, tempattack);
-                }
-               
+                }               
             }
             else if ( tempattack is LightMagicAbility )
             {
@@ -183,11 +171,12 @@ namespace rpg_Game_V1.EntityModels
                  r = this.DoAttack(target, tempattack);
 
             }
-             return r;
+
+            return r;
         }
+
         private int DoAttack(Enemy target, Ability a)
         {
-
             if(a is LightAttackAbility)
             {
                 var skill = (LightAttackAbility)a;
@@ -212,11 +201,8 @@ namespace rpg_Game_V1.EntityModels
                 var r = resolution.Resolve();
                 return r;
             }
-            
-            
-
-            
         }
+
         public string InventoryList()
         {
             StringBuilder result = new StringBuilder();

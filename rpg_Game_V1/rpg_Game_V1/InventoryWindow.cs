@@ -1,23 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-using rpg_Game_V1.EntityModels;
-using rpg_Game_V1.Weapons;
-using rpg_Game_V1.Common;
-
-namespace rpg_Game_V1
+﻿namespace rpg_Game_V1
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Data;
+    using System.Drawing;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
+
+    using EntityModels;
+    using Weapons;
+    using Common;
+
     public partial class InventoryWindow : Form
     {
-        private const string EmptySlotPath = "../../../Media/Items/EmptySlot.png";
-        public Player Human { get; set; }
+        private const string EmptySlotPath = "../../../Media/Items/EmptySlot.png";        
 
         public InventoryWindow()
         {
@@ -25,9 +24,8 @@ namespace rpg_Game_V1
         }
 
         public InventoryWindow(Player player)
-            : base()
-        {
-            InitializeComponent();
+            : this()
+        {            
             this.Human = player;
             this.InventoryItems.Text = string.Join("\n", Human.Inventory );
             this.comboBoxEquip.Items.AddRange(this.ItemsNames());
@@ -38,9 +36,10 @@ namespace rpg_Game_V1
             this.SetUpEquipment();
         }
 
+        public Player Human { get; set; }
+
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
         private string[] ItemsNames()
@@ -75,8 +74,7 @@ namespace rpg_Game_V1
             else if(item is Armor)
             {
                 this.Human.EquipArmor(item);
-            }
-            
+            }            
 
             this.SetUpEquipment();
             this.InventoryItems.Text = string.Join("\n", Human.Inventory);
@@ -100,8 +98,6 @@ namespace rpg_Game_V1
                 }
                 else if(item is Weapon)
                 {
-                    
-                 
                     switch(count)
                     {
                         case 0:
@@ -187,8 +183,6 @@ namespace rpg_Game_V1
             this.comboBoxUnequip.ResetText();
             this.Update();
         }
-
-
     }
 }
 

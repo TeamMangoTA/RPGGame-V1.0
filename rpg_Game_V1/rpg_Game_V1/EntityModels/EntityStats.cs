@@ -1,23 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace rpg_Game_V1.EntityModels
+﻿namespace rpg_Game_V1.EntityModels
 {
+    using System.Text;
+
     public struct EntityStats
     {
-        public int Health { get; set; }
-        public int Mana { get; set; }
-        public int Stamina { get; set; }
-
-        public int Dex { get; set; }
-        public int Int { get; set; }
-        public int Str { get; set; }
-
-        public int DefenceRating { get; set; }
-
         public EntityStats(int health, int mana, int stamina, int dex, int intelligence, int strenght, int dr):this()
         {
             this.Health = health;
@@ -28,6 +14,16 @@ namespace rpg_Game_V1.EntityModels
             this.Str = strenght;
             this.DefenceRating = dr;
         }
+
+        public int Health { get; set; }
+        public int Mana { get; set; }
+        public int Stamina { get; set; }
+
+        public int Dex { get; set; }
+        public int Int { get; set; }
+        public int Str { get; set; }
+
+        public int DefenceRating { get; set; }
 
         public override string ToString()
         {

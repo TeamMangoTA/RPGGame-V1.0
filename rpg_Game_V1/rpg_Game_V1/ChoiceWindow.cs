@@ -1,18 +1,19 @@
-﻿using rpg_Game_V1.Engine;
-using rpg_Game_V1.EntityModels;
-using rpg_Game_V1.Factories;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿namespace rpg_Game_V1
+{    
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Data;
+    using System.Drawing;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
 
-namespace rpg_Game_V1
-{
+    using Engine;
+    using EntityModels;
+    using Factories;
+
     public partial class ChoiceWindow : Form
     {
         public BattlePath battlePath { get; set; }
@@ -23,8 +24,8 @@ namespace rpg_Game_V1
         }
 
         public ChoiceWindow(BattlePath bp)
-        {
-            InitializeComponent();
+            : this()
+        {            
             foreach (var item in CoreEngine.OpenForms)
             {
                 if(item is CombatScreen||item is LooseWindow)
@@ -32,9 +33,9 @@ namespace rpg_Game_V1
                     item.Close();
                 }
             }
+
             this.battlePath = bp;
-            this.labelStatsPlayer.Text = ScreenStats();
-            
+            this.labelStatsPlayer.Text = ScreenStats();            
         }
 
         private void buttonInventory_Click(object sender, EventArgs e)

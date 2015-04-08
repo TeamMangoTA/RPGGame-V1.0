@@ -1,17 +1,18 @@
-﻿using rpg_Game_V1.EntityModels;
-using rpg_Game_V1.Factories;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿namespace rpg_Game_V1
+{   
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Data;
+    using System.Drawing;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
 
-namespace rpg_Game_V1
-{
+    using EntityModels;
+    using Factories;
+
     public partial class CombatScreen : Form
     {
         public Player HumanPlayer { get; set; }
@@ -24,8 +25,8 @@ namespace rpg_Game_V1
         }
 
         public CombatScreen(string imageLocation)
-        {
-            InitializeComponent();
+            : this()
+        {            
             this.EnemyPicture.Load(imageLocation);
         }
 
@@ -90,38 +91,6 @@ namespace rpg_Game_V1
             }
 
         }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void HeroAttackResult_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
 
         
     }

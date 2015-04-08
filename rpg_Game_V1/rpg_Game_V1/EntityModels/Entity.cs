@@ -1,24 +1,20 @@
-﻿using rpg_Game_V1.EntityModels.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace rpg_Game_V1.EntityModels
+﻿namespace rpg_Game_V1.EntityModels
 {
+    using System.Text;
+
+    using EntityModels.Interfaces;
+
     public abstract class Entity:IEntity
     {
-        public EntityStats Info { get;  set; }
-
-        public string Name { get; set; }
-
         public Entity(string name,int health,int mana, int stamina,
             int dexterity, int intelligence, int strenght, int defenceRation)
         {
             this.Name = name;
             this.Info = new EntityStats(health, mana, stamina, dexterity, intelligence, strenght,defenceRation);
         }
+
+        public EntityStats Info { get; set; }
+        public string Name { get; set; }
 
         public void ChangeHealth(int health)
         {
@@ -29,7 +25,6 @@ namespace rpg_Game_V1.EntityModels
             var i = this.Info.Int;
             var str = this.Info.Str;
             var dr = this.Info.DefenceRating;
-
 
             this.Info = new EntityStats(h, m, s, d, i, str,dr);
         }
@@ -44,7 +39,6 @@ namespace rpg_Game_V1.EntityModels
             var str = this.Info.Str;
             var dr = this.Info.DefenceRating;
 
-
             this.Info = new EntityStats(h, m, s, d, i, str, dr);
         }
 
@@ -58,7 +52,6 @@ namespace rpg_Game_V1.EntityModels
             var str = this.Info.Str;
             var dr = this.Info.DefenceRating;
 
-
             this.Info = new EntityStats(h, m, s, d, i, str, dr);
         }
 
@@ -71,7 +64,6 @@ namespace rpg_Game_V1.EntityModels
             var i = this.Info.Int;
             var str = this.Info.Str;
             var dr = this.Info.DefenceRating+def;
-
 
             this.Info = new EntityStats(h, m, s, d, i, str, dr);
         }
