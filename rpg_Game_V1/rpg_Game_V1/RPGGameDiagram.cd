@@ -15,7 +15,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="rpg_Game_V1.AbilityModels.DeffAbility" Collapsed="true">
-    <Position X="7.25" Y="5.75" Width="1.5" />
+    <Position X="6" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAQAAAAAAAAAIAAAAAAAAAAAgAAAAABA=</HashCode>
       <FileName>AbilityModels\DeffAbility.cs</FileName>
@@ -28,6 +28,7 @@
       <HashCode>AAAAAAAAAAAAAQAEAAAAAAEIAAAAgAAAAAAgAAAAABA=</HashCode>
       <FileName>AbilityModels\HealAbility.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.AbilityModels.LightAttackAbility" Collapsed="true">
     <Position X="2.75" Y="7.25" Width="1.5" />
@@ -35,6 +36,7 @@
       <HashCode>AAAAAAAAAAAAAQAEAAAAAAAIAAAAAAAAAAAgAAAAABA=</HashCode>
       <FileName>AbilityModels\LightAttackAbility.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.AbilityModels.LightMagicAbility" Collapsed="true">
     <Position X="5" Y="7.25" Width="1.5" />
@@ -42,6 +44,7 @@
       <HashCode>AAAAAAAAAAAAAQAEAAAAAAAIAAAAAAAAAAAgAAAAABA=</HashCode>
       <FileName>AbilityModels\LightMagicAbility.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.ActionModels.GameAction" Collapsed="true">
     <Position X="2.75" Y="8.5" Width="1.5" />
@@ -165,9 +168,10 @@
   <Class Name="rpg_Game_V1.Weapons.DarkStaff" Collapsed="true">
     <Position X="2.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAQAAA=</HashCode>
       <FileName>Weapons\DarkStaff.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="rpg_Game_V1.Weapons.Items" Collapsed="true">
     <Position X="3.75" Y="0.5" Width="1.5" />
@@ -187,7 +191,7 @@
   <Class Name="rpg_Game_V1.Weapons.Saber" Collapsed="true">
     <Position X="5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAQAAA=</HashCode>
       <FileName>Weapons\Saber.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -195,7 +199,7 @@
   <Class Name="rpg_Game_V1.Weapons.Trinket" Collapsed="true">
     <Position X="7.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAACAAAAAAAAAAAAAQQAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>Weapons\Trinket.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -265,7 +269,7 @@
   <Interface Name="rpg_Game_V1.ActionModels.Interface.IOffensive" Collapsed="true">
     <Position X="13" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAQAQAA=</HashCode>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAEAAAAAgAAAAAAAAAQAQAA=</HashCode>
       <FileName>ActionModels\Interface\IOffensive.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -286,7 +290,7 @@
   <Interface Name="rpg_Game_V1.Weapons.Interface.IWeapon" Collapsed="true">
     <Position X="14.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQQAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQQAAA=</HashCode>
       <FileName>Weapons\Interface\IWeapon.cs</FileName>
     </TypeIdentifier>
   </Interface>
