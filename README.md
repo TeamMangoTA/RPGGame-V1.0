@@ -18,16 +18,17 @@ The RPG game was developed as a team project for the C# OOP Course in [Telerik A
 
 
 ###Menu
-![Menu](http://puu.sh/h5SWc/670b838460.png)
+![Screenshot1](https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/Media/Screens/screen1.jpg?raw=true)
 
 
 ###Screenshots
 
-![Screenshot1](https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/Media/Screens/screen1.jpg?raw=true)
-![Screenshot2](http://puu.sh/h5T2x/668c9efba1.jpg?raw=true)
-![Screenshot3](http://puu.sh/h5T0Y/896cca49c8.jpg?raw=true)
+![Screenshot1](https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/Media/Screens/Screen2.jpg?raw=true)
+![Screenshot1](https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/Media/Screens/Screen3.jpg?raw=true)
+![Screenshot1](https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/Media/Screens/Screen4.jpg?raw=true)
+![Screenshot1](https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/Media/Screens/Screen5.jpg?raw=true)
 
-
+https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/RPGGameDiagram.png
 #Object-Oriented Programming
 
 ##General Requirements Fulfilled:
@@ -67,5 +68,5 @@ The RPG game was developed as a team project for the C# OOP Course in [Telerik A
  User interface (UI) – console, graphical, web or mobile
 
 ##Class Diagram:
-![Diagram](http://puu.sh/h60Y4/114cdd95a1.png?raw=true)
+![Diagram](https://github.com/TeamMangoTA/RPGGame-V1.0/blob/master/rpg_Game_V1/RPGGameDiagram.png?raw=true)
 
